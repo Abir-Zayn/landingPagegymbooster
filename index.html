@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@x.x.x/x.x.x.min.js" defer></script>
 
     <!-- Apply Inter to the entire page -->
     <style>
@@ -46,32 +47,86 @@
 
     <!--header Section-->
     <header class="bg-white shadow-sm border-b">
-      <div class="max-w-7xlsm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center">
             <div class="text-xl font-bold text-gray-900">
-              <span class="text-red-600">Health</span
-              ><span class="text-gray-700">Comparison</span>
+              <span class="text-red-600">Health</span>
+              <span class="text-gray-700">Comparison</span>
               <div class="text-xs text-gray-500 font-normal">Germany</div>
             </div>
           </div>
 
-          <!-- Navigation Buttons -->
-          <div class="flex space-x-3">
-            <button
-              class="px-4 py-2 text-sm bg-header-btn rounded-md border border-black"
-            >
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-3">
+            <button class="px-4 py-2 text-sm bg-header-btn rounded-md border border-[#d3ddd5] hover:bg-gray-100 transition-colors duration-200">
               This is how we test
             </button>
-            <button
-              class="px-4 py-2 text-sm bg-header-btn rounded-md border border-black"
-            >
+            <button class="px-4 py-2 text-sm bg-header-btn rounded-md border border-[#d3ddd5] hover:bg-gray-100 transition-colors duration-200">
               How we finance ourselves
             </button>
           </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+                  id="menuButton"
+                  class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
+
+      <!-- Mobile Sidebar Menu -->
+      <div
+              id="mobileMenu"
+              class="md:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex justify-between items-center p-4 border-b">
+          <h2 class="text-sm font-semibold text-gray-800">MAIN MENU</h2>
+          <button
+                  id="closeMenuButton"
+                  class="p-1 rounded-md hover:bg-gray-100"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li>
+              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-gray-200 pb-2">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-gray-200 pb-2">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200 border-b border-gray-200 pb-2">
+                imprint
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200 border-b border-gray-200 pb-2">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Overlay for mobile menu -->
+      <div
+              id="overlay"
+              class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+      ></div>
     </header>
 
     <section class="bg-teal-dark text-white py-16 lg:py-24">
@@ -1280,7 +1335,28 @@
           menu.classList.toggle('hidden');
         }
       }
+      // Get DOM elements
+      const menuButton = document.getElementById('menuButton');
+      const closeMenuButton = document.getElementById('closeMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('overlay');
 
+      // Function to open menu
+      function openMenu() {
+        mobileMenu.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+      }
+
+      // Function to close menu
+      function closeMenu() {
+        mobileMenu.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+      }
+
+      // Event listeners
+      menuButton.addEventListener('click', openMenu);
+      closeMenuButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
       // Add scroll effect to header
       window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
