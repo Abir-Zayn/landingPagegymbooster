@@ -127,6 +127,7 @@
       ></div>
     </header>
 
+    <!--Hero Section-->
     <section class="bg-teal-dark text-white py-16 lg:py-24">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
@@ -206,19 +207,6 @@
               class="w-full h-auto rounded-lg shadow-lg"
             />
 
-            <!-- Quick Navigation -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                class="bg-teal-medium text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                Go to Test Winner
-              </button>
-              <button
-                class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Quality Features
-              </button>
-            </div>
 
             <!-- Transparency Notice -->
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-6">
@@ -267,6 +255,21 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+
+            <!-- Quick Navigation -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-4 justify-center">
+              <button
+                      class="bg-teal-medium text-white px-16 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                Go to Test Winner
+              </button>
+              <button
+                      class="bg-gray-200 text-gray-800 px-16 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                Quality Features
+              </button>
             </div>
 
             <!-- Main Content Text -->
@@ -367,7 +370,7 @@
             </div>
 
             <!--5 quality features-->
-            <div class="bg-white rounded-lg pt-4">
+            <div class="bg-white rounded-lg pt-4" id="qualitaetsmerkmale">
               <h1 class="text-2xl font-bold text-gray-900 mb-4">
                 Check these 5 quality features before you buy an iron
                 supplement!
@@ -506,7 +509,7 @@
             </div>
 
             <!--Further Test criteria-->
-            <div class="max-w-3xl mx-auto bg-white">
+            <div class="max-w-3xl mx-auto bg-white" id="testkriterien">
               <h1 class="text-2xl font-bold text-gray-900 mb-4">
                 Further test criteria
               </h1>
@@ -549,7 +552,7 @@
             </div>
 
             <!--Product Top Seller [1st Place]-->
-            <h1 class="mt-6 text-2xl font-bold text-gray-900 mb-4">
+            <h1 class="mt-6 text-2xl font-bold text-gray-900 mb-4" id="testergebnisse">
               Our Test Results
             </h1>
             <div
@@ -975,7 +978,7 @@
 
 
             <!-- List of Sources -->
-            <div class="p-6 md:p-8 rounded-2xl shadow-lg w-full ">
+            <div class="p-6 md:p-8 rounded-2xl w-full ">
               <div class="flex justify-between items-center mb-4 cursor-pointer" onclick="toggleSources()">
                 <h2 class="text-lg md:text-lg font-semibold text-gray-700 uppercase ">List of Sources</h2>
                 <button id="toggle-button" class="text-gray-500">
@@ -1124,7 +1127,8 @@
 
           <!-- Table of Contents Sidebar -->
           <div class="lg:col-span-1">
-            <div class="bg-gray-50 rounded-2xl p-6 sticky top-8">
+            <!-- Desktop Table of Contents -->
+            <div class="hidden lg:block rounded-2xl p-6 sticky top-8" style="background-color: #f2f2f2;">
               <h3
                 class="text-lg font-bold text-gray-900 mb-6 flex items-center"
               >
@@ -1135,13 +1139,13 @@
               <nav class="space-y-3">
                 <a
                   href="#wichtigkeit"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   The importance of manganese for physical health
                 </a>
                 <a
                   href="#gruende"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   Common causes of manganese deficiency
                 </a>
@@ -1153,13 +1157,61 @@
                 </a>
                 <a
                   href="#testkriterien"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   Additional test criteria
                 </a>
                 <a
                   href="#testergebnisse"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                >
+                  Our test results
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Mobile Table of Contents - Sticky Bottom -->
+          <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200" style="background-color: #f2f2f2;">
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-sm font-bold text-gray-900 flex items-center">
+                  <i class="fas fa-list-ul mr-2 text-gray-600"></i>
+                  TABLE OF CONTENTS
+                </h3>
+                <button id="mobile-toc-toggle" class="text-gray-600 focus:outline-none">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+              </div>
+
+              <nav id="mobile-toc-content" class="space-y-2 max-h-64 overflow-y-auto">
+                <a
+                  href="#wichtigkeit"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  The importance of manganese for physical health
+                </a>
+                <a
+                  href="#gruende"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  Common causes of manganese deficiency
+                </a>
+                <a
+                  href="#qualitaetsmerkmale"
+                  class="block text-xs text-red-600 font-semibold py-2 border-b border-gray-200"
+                >
+                  Check these 5 quality features before buying a supplement!
+                </a>
+                <a
+                  href="#testkriterien"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  Additional test criteria
+                </a>
+                <a
+                  href="#testergebnisse"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2"
                 >
                   Our test results
                 </a>
@@ -1185,6 +1237,123 @@
             });
           }
         });
+      });
+
+      // Table of Contents Active Section Highlighting
+      function updateActiveTableOfContents() {
+        const sections = [
+          'wichtigkeit',
+          'gruende',
+          'qualitaetsmerkmale',
+          'testkriterien',
+          'testergebnisse'
+        ];
+
+        // Get both desktop and mobile TOC links
+        const desktopTocLinks = document.querySelectorAll('.lg\\:block nav a[href^="#"]');
+        const mobileTocLinks = document.querySelectorAll('.lg\\:hidden nav a[href^="#"]');
+        let activeSection = null;
+
+        // Find the current section in view
+        for (const sectionId of sections) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            // Check if section is in viewport (with some offset for better UX)
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              activeSection = sectionId;
+              break;
+            }
+          }
+        }
+
+        // If no section is exactly in view, find the one closest to the top
+        if (!activeSection) {
+          let closestSection = null;
+          let closestDistance = Infinity;
+
+          for (const sectionId of sections) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+              const rect = section.getBoundingClientRect();
+              const distance = Math.abs(rect.top - 150);
+              if (distance < closestDistance && rect.top <= 150) {
+                closestDistance = distance;
+                closestSection = sectionId;
+              }
+            }
+          }
+          activeSection = closestSection;
+        }
+
+        // Update desktop table of contents styling
+        desktopTocLinks.forEach(link => {
+          const href = link.getAttribute('href').substring(1); // Remove #
+          if (href === activeSection) {
+            // Active state - black text with font-weight-600
+            link.className = 'block text-sm text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            link.style.fontWeight = '600';
+          } else {
+            // Default state
+            link.className = 'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.style.fontWeight = '';
+          }
+        });
+
+        // Update mobile table of contents styling
+        mobileTocLinks.forEach(link => {
+          const href = link.getAttribute('href').substring(1); // Remove #
+          if (href === activeSection) {
+            // Active state - black text with font-weight-600
+            link.className = 'block text-xs text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            link.style.fontWeight = '600';
+          } else {
+            // Default state
+            link.className = 'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.style.fontWeight = '';
+          }
+        });
+      }
+
+      // Mobile TOC Toggle functionality
+      function initializeMobileTOC() {
+        const toggleButton = document.getElementById('mobile-toc-toggle');
+        const tocContent = document.getElementById('mobile-toc-content');
+        let isExpanded = false; // Start collapsed
+
+        if (toggleButton && tocContent) {
+          // Set initial collapsed state
+          tocContent.style.display = 'none';
+          toggleButton.querySelector('i').className = 'fas fa-chevron-down';
+
+          toggleButton.addEventListener('click', () => {
+            if (isExpanded) {
+              // Collapse
+              tocContent.style.display = 'none';
+              toggleButton.querySelector('i').className = 'fas fa-chevron-down';
+              isExpanded = false;
+            } else {
+              // Expand
+              tocContent.style.display = 'block';
+              toggleButton.querySelector('i').className = 'fas fa-chevron-up';
+              isExpanded = true;
+            }
+          });
+        }
+      }
+
+      // Listen for scroll events
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        // Debounce scroll events for better performance
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveTableOfContents, 10);
+      });
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        updateActiveTableOfContents();
+        initializeMobileTOC(); // Initialize mobile TOC
       });
 
       // Toggle sources container
