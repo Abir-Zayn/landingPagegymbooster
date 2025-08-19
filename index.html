@@ -43,13 +43,13 @@
       };
     </script>
   </head>
-  <body class="bg-gray-50">
+  <body class="min-h-screen bg-gray-50">
 
     <!--header Section-->
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
+          <!-- Logo - positioned at the left -->
           <div class="flex items-center">
             <div class="text-xl font-bold text-gray-900">
               <span class="text-red-600">Health</span>
@@ -58,12 +58,12 @@
             </div>
           </div>
 
-          <!-- Desktop Navigation -->
+          <!-- Navigation Buttons - positioned at the right -->
           <div class="hidden md:flex space-x-3">
-            <button class="px-4 py-2 text-sm bg-header-btn rounded-md border border-[#d3ddd5] hover:bg-gray-100 transition-colors duration-200">
+            <button class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200">
               This is how we test
             </button>
-            <button class="px-4 py-2 text-sm bg-header-btn rounded-md border border-[#d3ddd5] hover:bg-gray-100 transition-colors duration-200">
+            <button class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200">
               How we finance ourselves
             </button>
           </div>
@@ -73,9 +73,7 @@
                   id="menuButton"
                   class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <i class="fa-solid fa-bars w-6 h-6"></i>
           </button>
         </div>
       </div>
@@ -99,22 +97,22 @@
         <nav class="p-4">
           <ul class="space-y-4">
             <li>
-              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-gray-200 pb-2">
+              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-gray-200 pb-2">
+              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200 border-b border-gray-200 pb-2">
+              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 imprint
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200 border-b border-gray-200 pb-2">
+              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 Privacy Policy
               </a>
             </li>
@@ -129,123 +127,69 @@
       ></div>
     </header>
 
+    <!--Hero Section-->
     <section class="bg-teal-dark text-white py-16 lg:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Content -->
-          <div>
-            <!-- Tag -->
-            <div
-              class="inline-block px-3 py-1 rounded-full text-sm font-medium mb-6"
-            >
-              Buying Guide
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+          <!-- Tag and Social Icons in the same row -->
+          <div class="flex flex-wrap items-center justify-between mb-6">
+            <!-- Tag on the left -->
+            <div class="inline-block px-3 py-1 rounded-full text-sm font-normal bg-paragraph-bg text-gray-300 mr-8">
+              Buying guide
             </div>
-
-            <!--Social Icons-->
-            <div class="flex space-x-4 mb-6 lg:hidden">
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors"
-              >
-                <i class="fab fa-facebook-f"></i>
+            <!-- Social Icons on the right -->
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+                <i class="fab fa-facebook-f text-lg"></i>
               </a>
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors"
-              >
-                <i class="fab fa-twitter"></i>
+              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+                <i class="fab fa-twitter text-lg"></i>
               </a>
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors"
-              >
-                <i class="fab fa-pinterest"></i>
+              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+                <i class="fab fa-pinterest text-lg"></i>
               </a>
             </div>
-
-            <!-- Main Title -->
-            <h1 class="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Manganese Supplement Test Winner 2025
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="text-xl lg:text-2xl mb-8 text-gray-200">
-              Check these 5 quality features before making a purchase decision!
-            </p>
-
-            <!-- Key Features -->
-            <div class="grid sm:grid-cols-2 gap-4 mb-8">
-              <div class="flex items-center space-x-3">
-                <div
-                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                >
-                  <i class="fas fa-check text-teal-dark text-sm"></i>
-                </div>
-                <span class="text-lg">Independent financing</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <div
-                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                >
-                  <i class="fas fa-check text-teal-dark text-sm"></i>
-                </div>
-                <span class="text-lg">Transparent criteria</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <div
-                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                >
-                  <i class="fas fa-check text-teal-dark text-sm"></i>
-                </div>
-                <span class="text-lg">Evidence-based editorial work</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <div
-                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                >
-                  <i class="fas fa-check text-teal-dark text-sm"></i>
-                </div>
-                <span class="text-lg">Created by experts</span>
-              </div>
-            </div>
-
-            <!-- Introduction Text -->
-            <p
-              class="text-gray-300 leading-relaxed bg-paragraph-bg p-2 rounded-lg"
-            >
-              If you are looking for manganese supplements, you will find
-              countless products online. Unfortunately, it is not obvious to
-              consumers that some supplements are produced under poor quality
-              standards or contain unnecessary additives. If you then decide on
-              a product and see no effect, the frustration is great. That’s why
-              our editorial team at Health Comparison Germany has compiled all
-              the key criteria in this buying guide to help you evaluate
-              products on the market.
-            </p>
           </div>
-
-          <!-- Right Content - Social Icons for Desktop -->
-          <div class="hidden lg:flex justify-end">
-            <div class="flex flex-col space-y-4">
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors text-xl"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors text-xl"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="text-white hover:text-gray-300 transition-colors text-xl"
-              >
-                <i class="fab fa-pinterest"></i>
-              </a>
+          <!-- Main Title -->
+          <h1 class="text-3xl lg:text-5xl font-normal mb-6 leading-tight whitespace-nowrap">
+            Manganese preparation test winner 2025
+          </h1>
+          <!-- Subtitle -->
+          <p class="text-xl lg:text-2xl mb-8 text-gray-200 font-light">
+            Check these 5 quality features before making a purchase decision!
+          </p>
+          <!-- Key Features -->
+          <div class="grid grid-cols-2 gap-6 mb-8 ">
+            <div class="flex items-start ">
+              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-euro-sign text-teal-900 text-sm"></i>
+              </div>
+              <span class="text-lg">Independent financing</span>
             </div>
+            <div class="flex items-center ">
+              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-list-alt text-teal-900 text-sm"></i>
+              </div>
+              <span class="text-lg">Transparent criteria</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-search text-teal-900 text-sm"></i>
+              </div>
+              <span class="text-lg">Evidence-based editing</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-user-graduate text-teal-900 text-sm"></i>
+              </div>
+              <span class="text-lg">Created by experts</span>
+            </div>
+          </div>
+          <!-- Introduction Text -->
+          <div class="bg-paragraph-bg p-6 rounded-lg max-w-3xl">
+            <p class="text-gray-300 leading-relaxed text-left">
+              If you're looking for manganese supplements, you'll find countless products online. Unfortunately, it's not obvious to the end consumer that some supplements are manufactured to substandard quality standards or contain unnecessary additives. If you then choose a product and it doesn't work, the frustration is immense. Our editorial team at Gesundheitsvergleich Deutschland has therefore compiled all the important criteria for evaluating the products on the market in this buying guide.
+            </p>
           </div>
         </div>
       </div>
@@ -263,19 +207,6 @@
               class="w-full h-auto rounded-lg shadow-lg"
             />
 
-            <!-- Quick Navigation -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                class="bg-teal-medium text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                Go to Test Winner
-              </button>
-              <button
-                class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Quality Features
-              </button>
-            </div>
 
             <!-- Transparency Notice -->
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-6">
@@ -324,6 +255,21 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+
+            <!-- Quick Navigation -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-4 justify-center">
+              <button
+                      class="bg-teal-medium text-white px-16 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                Go to Test Winner
+              </button>
+              <button
+                      class="bg-gray-200 text-gray-800 px-16 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                Quality Features
+              </button>
             </div>
 
             <!-- Main Content Text -->
@@ -424,7 +370,7 @@
             </div>
 
             <!--5 quality features-->
-            <div class="bg-white rounded-lg pt-4">
+            <div class="bg-white rounded-lg pt-4" id="qualitaetsmerkmale">
               <h1 class="text-2xl font-bold text-gray-900 mb-4">
                 Check these 5 quality features before you buy an iron
                 supplement!
@@ -563,7 +509,7 @@
             </div>
 
             <!--Further Test criteria-->
-            <div class="max-w-3xl mx-auto bg-white">
+            <div class="max-w-3xl mx-auto bg-white" id="testkriterien">
               <h1 class="text-2xl font-bold text-gray-900 mb-4">
                 Further test criteria
               </h1>
@@ -606,7 +552,7 @@
             </div>
 
             <!--Product Top Seller [1st Place]-->
-            <h1 class="mt-6 text-2xl font-bold text-gray-900 mb-4">
+            <h1 class="mt-6 text-2xl font-bold text-gray-900 mb-4" id="testergebnisse">
               Our Test Results
             </h1>
             <div
@@ -1032,7 +978,7 @@
 
 
             <!-- List of Sources -->
-            <div class="p-6 md:p-8 rounded-2xl shadow-lg w-full ">
+            <div class="p-6 md:p-8 rounded-2xl w-full ">
               <div class="flex justify-between items-center mb-4 cursor-pointer" onclick="toggleSources()">
                 <h2 class="text-lg md:text-lg font-semibold text-gray-700 uppercase ">List of Sources</h2>
                 <button id="toggle-button" class="text-gray-500">
@@ -1181,7 +1127,8 @@
 
           <!-- Table of Contents Sidebar -->
           <div class="lg:col-span-1">
-            <div class="bg-gray-50 rounded-2xl p-6 sticky top-8">
+            <!-- Desktop Table of Contents -->
+            <div class="hidden lg:block rounded-2xl p-6 sticky top-8" style="background-color: #f2f2f2;">
               <h3
                 class="text-lg font-bold text-gray-900 mb-6 flex items-center"
               >
@@ -1192,13 +1139,13 @@
               <nav class="space-y-3">
                 <a
                   href="#wichtigkeit"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   The importance of manganese for physical health
                 </a>
                 <a
                   href="#gruende"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   Common causes of manganese deficiency
                 </a>
@@ -1210,13 +1157,61 @@
                 </a>
                 <a
                   href="#testkriterien"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2 border-b border-gray-200"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
                 >
                   Additional test criteria
                 </a>
                 <a
                   href="#testergebnisse"
-                  class="block text-sm text-gray-700 hover:text-red-600 transition-colors py-2"
+                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                >
+                  Our test results
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Mobile Table of Contents - Sticky Bottom -->
+          <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200" style="background-color: #f2f2f2;">
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-sm font-bold text-gray-900 flex items-center">
+                  <i class="fas fa-list-ul mr-2 text-gray-600"></i>
+                  TABLE OF CONTENTS
+                </h3>
+                <button id="mobile-toc-toggle" class="text-gray-600 focus:outline-none">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+              </div>
+
+              <nav id="mobile-toc-content" class="space-y-2 max-h-64 overflow-y-auto">
+                <a
+                  href="#wichtigkeit"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  The importance of manganese for physical health
+                </a>
+                <a
+                  href="#gruende"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  Common causes of manganese deficiency
+                </a>
+                <a
+                  href="#qualitaetsmerkmale"
+                  class="block text-xs text-red-600 font-semibold py-2 border-b border-gray-200"
+                >
+                  Check these 5 quality features before buying a supplement!
+                </a>
+                <a
+                  href="#testkriterien"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
+                >
+                  Additional test criteria
+                </a>
+                <a
+                  href="#testergebnisse"
+                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2"
                 >
                   Our test results
                 </a>
@@ -1242,6 +1237,123 @@
             });
           }
         });
+      });
+
+      // Table of Contents Active Section Highlighting
+      function updateActiveTableOfContents() {
+        const sections = [
+          'wichtigkeit',
+          'gruende',
+          'qualitaetsmerkmale',
+          'testkriterien',
+          'testergebnisse'
+        ];
+
+        // Get both desktop and mobile TOC links
+        const desktopTocLinks = document.querySelectorAll('.lg\\:block nav a[href^="#"]');
+        const mobileTocLinks = document.querySelectorAll('.lg\\:hidden nav a[href^="#"]');
+        let activeSection = null;
+
+        // Find the current section in view
+        for (const sectionId of sections) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            // Check if section is in viewport (with some offset for better UX)
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              activeSection = sectionId;
+              break;
+            }
+          }
+        }
+
+        // If no section is exactly in view, find the one closest to the top
+        if (!activeSection) {
+          let closestSection = null;
+          let closestDistance = Infinity;
+
+          for (const sectionId of sections) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+              const rect = section.getBoundingClientRect();
+              const distance = Math.abs(rect.top - 150);
+              if (distance < closestDistance && rect.top <= 150) {
+                closestDistance = distance;
+                closestSection = sectionId;
+              }
+            }
+          }
+          activeSection = closestSection;
+        }
+
+        // Update desktop table of contents styling
+        desktopTocLinks.forEach(link => {
+          const href = link.getAttribute('href').substring(1); // Remove #
+          if (href === activeSection) {
+            // Active state - black text with font-weight-600
+            link.className = 'block text-sm text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            link.style.fontWeight = '600';
+          } else {
+            // Default state
+            link.className = 'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.style.fontWeight = '';
+          }
+        });
+
+        // Update mobile table of contents styling
+        mobileTocLinks.forEach(link => {
+          const href = link.getAttribute('href').substring(1); // Remove #
+          if (href === activeSection) {
+            // Active state - black text with font-weight-600
+            link.className = 'block text-xs text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            link.style.fontWeight = '600';
+          } else {
+            // Default state
+            link.className = 'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.style.fontWeight = '';
+          }
+        });
+      }
+
+      // Mobile TOC Toggle functionality
+      function initializeMobileTOC() {
+        const toggleButton = document.getElementById('mobile-toc-toggle');
+        const tocContent = document.getElementById('mobile-toc-content');
+        let isExpanded = false; // Start collapsed
+
+        if (toggleButton && tocContent) {
+          // Set initial collapsed state
+          tocContent.style.display = 'none';
+          toggleButton.querySelector('i').className = 'fas fa-chevron-down';
+
+          toggleButton.addEventListener('click', () => {
+            if (isExpanded) {
+              // Collapse
+              tocContent.style.display = 'none';
+              toggleButton.querySelector('i').className = 'fas fa-chevron-down';
+              isExpanded = false;
+            } else {
+              // Expand
+              tocContent.style.display = 'block';
+              toggleButton.querySelector('i').className = 'fas fa-chevron-up';
+              isExpanded = true;
+            }
+          });
+        }
+      }
+
+      // Listen for scroll events
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        // Debounce scroll events for better performance
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveTableOfContents, 10);
+      });
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        updateActiveTableOfContents();
+        initializeMobileTOC(); // Initialize mobile TOC
       });
 
       // Toggle sources container
@@ -1328,14 +1440,6 @@
         }
       }
 
-      // Mobile menu toggle (if needed for future expansion)
-      function toggleMobileMenu() {
-        const menu = document.getElementById('mobile-menu');
-        if (menu) {
-          menu.classList.toggle('hidden');
-        }
-      }
-      // Get DOM elements
       const menuButton = document.getElementById('menuButton');
       const closeMenuButton = document.getElementById('closeMenuButton');
       const mobileMenu = document.getElementById('mobileMenu');
@@ -1357,6 +1461,7 @@
       menuButton.addEventListener('click', openMenu);
       closeMenuButton.addEventListener('click', closeMenu);
       overlay.addEventListener('click', closeMenu);
+
       // Add scroll effect to header
       window.addEventListener('scroll', function () {
         const header = document.querySelector('header');

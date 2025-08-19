@@ -13,7 +13,7 @@ function createProductCard({
                                productLink
                            }) {
     return `
-  <div class="bg-teal-light rounded-2xl shadow mt-6 pb-6">
+  <div class="bg-teal-light rounded-2xl shadow mt-6 p-6">
     <!-- Header -->
     <div class="mb-4">
       <span class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded">${place}</span>
