@@ -18,7 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@x.x.x/x.x.x.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@x.x.x/x.x.x.min.js"
+      defer
+    ></script>
 
     <!-- Apply Inter to the entire page -->
     <style>
@@ -44,7 +47,6 @@
     </script>
   </head>
   <body class="min-h-screen bg-gray-50">
-
     <!--header Section-->
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,17 +60,21 @@
           </div>
 
           <div class="hidden md:flex space-x-3">
-            <button class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200">
+            <button
+              class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200"
+            >
               This is how we test
             </button>
-            <button class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200">
+            <button
+              class="px-4 py-2 text-sm bg-gray-100 rounded-md border border-[#d3ddd5] hover:bg-gray-200 transition-colors duration-200"
+            >
               How we finance ourselves
             </button>
           </div>
 
           <button
-                  id="menuButton"
-                  class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+            id="menuButton"
+            class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
           >
             <i class="fa-solid fa-bars md:w-6 md:h-6 w-8 h-8"></i>
           </button>
@@ -76,39 +82,58 @@
       </div>
 
       <div
-              id="mobileMenu"
-              class="md:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+        id="mobileMenu"
+        class="md:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
       >
         <div class="flex justify-between items-center p-4 border-b">
           <h2 class="text-sm font-semibold text-gray-800">MAIN MENU</h2>
-          <button
-                  id="closeMenuButton"
-                  class="p-1 rounded-md hover:bg-gray-100"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <button id="closeMenuButton" class="p-1 rounded-md hover:bg-gray-100">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
         <nav class="p-4">
           <ul class="space-y-4">
             <li>
-              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200">
+              <a
+                href="#"
+                class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200">
+              <a
+                href="#"
+                class="block text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
+              >
                 imprint
               </a>
             </li>
             <li>
-              <a href="#" class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
             </li>
@@ -117,8 +142,8 @@
       </div>
 
       <div
-              id="overlay"
-              class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+        id="overlay"
+        class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
       ></div>
     </header>
 
@@ -127,75 +152,109 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
           <div class="flex flex-wrap items-center justify-between mb-6">
-            <div class="inline-block px-3 py-1 rounded-full text-sm font-normal bg-paragraph-bg text-gray-300 mr-8">
+            <div
+              class="inline-block px-3 py-1 rounded-full text-sm font-normal bg-paragraph-bg text-gray-300 mr-8"
+            >
               Buying guide
             </div>
             <div class="flex space-x-4">
-              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
                 <i class="fab fa-facebook-f text-lg"></i>
               </a>
-              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
                 <i class="fab fa-twitter text-lg"></i>
               </a>
-              <a href="#" class="text-white hover:text-gray-300 transition-colors">
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
                 <i class="fab fa-pinterest text-lg"></i>
               </a>
             </div>
           </div>
-          <h1 class="text-3xl lg:text-5xl font-normal mb-6 leading-tight lg:whitespace-nowrap">
+          <h1
+            class="text-3xl lg:text-5xl font-normal mb-6 leading-tight lg:whitespace-nowrap"
+          >
             Manganese preparation test winner 2025
           </h1>
           <p class="text-xl lg:text-2xl mb-8 text-gray-200 font-light">
             Check these 5 quality features before making a purchase decision!
           </p>
-          <div class="grid grid-cols-2 gap-6 mb-8 ">
-            <div class="flex items-start ">
-              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-euro-sign text-teal-900 text-sm"></i>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 min-w-[2rem] min-h-[2rem] bg-white rounded-full flex items-center justify-center mr-3"
+              >
+                <i
+                  class="fas fa-euro-sign text-teal-900 text-sm leading-none"
+                ></i>
               </div>
               <span class="text-lg">Independent financing</span>
             </div>
-            <div class="flex items-center ">
-              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-list-alt text-teal-900 text-sm"></i>
+            <div class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 min-w-[2rem] min-h-[2rem] bg-white rounded-full flex items-center justify-center mr-3"
+              >
+                <i
+                  class="fas fa-list-alt text-teal-900 text-sm leading-none"
+                ></i>
               </div>
               <span class="text-lg">Transparent criteria</span>
             </div>
-            <div class="flex items-center">
-              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-search text-teal-900 text-sm"></i>
+            <div class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 min-w-[2rem] min-h-[2rem] bg-white rounded-full flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-search text-teal-900 text-sm leading-none"></i>
               </div>
               <span class="text-lg">Evidence-based editing</span>
             </div>
-            <div class="flex items-center">
-              <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-user-graduate text-teal-900 text-sm"></i>
+            <div class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 min-w-[2rem] min-h-[2rem] bg-white rounded-full flex items-center justify-center mr-3"
+              >
+                <i
+                  class="fas fa-user-graduate text-teal-900 text-sm leading-none"
+                ></i>
               </div>
               <span class="text-lg">Created by experts</span>
             </div>
           </div>
           <div class="bg-paragraph-bg p-6 rounded-lg max-w-3xl">
             <p class="text-gray-300 leading-relaxed text-left">
-              If you're looking for manganese supplements, you'll find countless products online. Unfortunately, it's not obvious to the end consumer that some supplements are manufactured to substandard quality standards or contain unnecessary additives. If you then choose a product and it doesn't work, the frustration is immense. Our editorial team at Gesundheitsvergleich Deutschland has therefore compiled all the important criteria for evaluating the products on the market in this buying guide.
+              If you're looking for manganese supplements, you'll find countless
+              products online. Unfortunately, it's not obvious to the end
+              consumer that some supplements are manufactured to substandard
+              quality standards or contain unnecessary additives. If you then
+              choose a product and it doesn't work, the frustration is immense.
+              Our editorial team at Gesundheitsvergleich Deutschland has
+              therefore compiled all the important criteria for evaluating the
+              products on the market in this buying guide.
             </p>
           </div>
         </div>
       </div>
     </section>
+    <!-- Product Gallery -->
+    <div class="px-8 flex justify-center items-center -mt-14">
+      <img
+        src="/image/imagetest.webp?height=400&width=600"
+        alt="Manganese Supplement Test Winner"
+        class="rounded-lg shadow-lg w-[900px]"
+      />
+    </div>
 
     <!-- Main Content -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-3 gap-12">
-          <!-- Product Gallery -->
           <div class="lg:col-span-2">
-            <img
-              src="/image/imagetest.webp?height=400&width=600"
-              alt="Manganese Supplement Test Winner"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-
-
             <!-- Transparency Notice -->
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-6">
               <!-- Collapsed state -->
@@ -210,7 +269,9 @@
                     >Transparency is important to us</span
                   >
                 </div>
-                <i class="fas fa-plus text-gray-500"></i>
+                <i
+                  class="fas fa-plus text-gray-500 transition-transform duration-600"
+                ></i>
               </div>
 
               <!-- Expanded content (hidden by default) -->
@@ -229,7 +290,9 @@
                   of our disclosure of financial interests.
                 </p>
 
-                <div class="flex space-x-4">
+                <div
+                  class="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0"
+                >
                   <div class="bg-teal-light p-2 rounded-lg">
                     <a href="#" class="font-medium flex items-center">
                       <i class="fas fa-flask mr-2"></i> This is how we test
@@ -245,13 +308,20 @@
               </div>
             </div>
 
-
             <!-- Quick Navigation -->
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4">
-              <a href="#" class="inline-block w-full text-center px-8 py-3 rounded-full bg-teal-medium text-white font-semibold">
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4"
+            >
+              <a
+                href="#"
+                class="inline-block w-full text-center px-8 py-3 rounded-full bg-teal-medium text-white font-semibold"
+              >
                 To the test winner
               </a>
-              <a href="#" class="inline-block w-full text-center px-8 py-3 rounded-full border-2 border-teal-medium text-teal-medium font-semibold">
+              <a
+                href="#"
+                class="inline-block w-full text-center px-8 py-3 rounded-full border-2 border-teal-medium text-teal-medium font-semibold"
+              >
                 Quality features
               </a>
             </div>
@@ -535,436 +605,169 @@
               </ul>
             </div>
 
-            <!--Product Top Seller [1st Place]-->
-            <h1 class="mt-6 text-2xl font-bold text-gray-900 mb-4" id="testergebnisse">
+            <h1
+              class="mt-6 ml-4 text-2xl font-bold text-gray-900 mb-4 py-10 md:py-12"
+              id="testergebnisse"
+            >
               Our Test Results
             </h1>
-            <div
-              class="max-w-4xl mx-auto bg-teal-light rounded-lg shadow-md overflow-hidden"
-            >
-              <!-- Product Review Container -->
-              <div class="ProductReview p-6">
-                <!-- Header Section -->
-                <div class="border-b border-gray-200 pb-6">
-                  <div class="flex flex-col md:flex-row justify-between gap-4">
-                    <div>
-                      <span
-                        class="inline-block bg-[#fedb88] text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-2"
-                        >1st place</span
-                      >
-                      <h1 class="text-2xl font-bold text-gray-900">
-                        manganese
-                      </h1>
-                      <p class="text-gray-600">by Vit4ever</p>
-                    </div>
-
-                    <!-- Test Winner Badge -->
-                    <div class="w-64 rounded-lg border border-yellow-400 shadow-[0_4px_12px_rgba(0,0,0,0.2)] bg-gradient-to-b from-yellow-200 to-yellow-100 p-2">
-                      <!-- Header -->
-                      <div class = 'border border-black'>
-                        <div class="text-center font-bold text-lg text-black">TEST</div>
-                        <div class="text-center font-bold text-2xl text-black mb-2">WINNER</div>
-
-                        <!-- Grid Section -->
-                        <div class="grid grid-cols-2 border-t border-black">
-                          <!-- Left Top -->
-                          <div class="bg-black text-white text-center flex items-center justify-center p-2 font-semibold text-sm">
-                            The big<br>product<br>test
-                          </div>
-                          <!-- Right Top -->
-                          <div class="bg-white text-black flex flex-col items-center justify-center p-2 font-bold text-sm">
-                            VERY<br>GOOD<br>
-                            <span class="font-normal">(9.5/10)</span>
-                          </div>
-
-                          <!-- Left Bottom -->
-                          <div class="bg-red-600 text-white flex flex-col items-center justify-center p-2">
-                            <div class="text-5xl font-bold leading-none">✓</div>
-                            <span class="text-sm font-semibold text-center">HEALTH<br>COMPARISON</span>
-                          </div>
-                          <!-- Right Bottom -->
-                          <div class="bg-white border-t border-black text-black text-xs p-2 flex flex-col justify-center">
-                            <p>Tested based on<br>quality criteria</p>
-                            <p class="mt-2 font-medium">Issue 01/2025</p>
-                            <p class="mt-1 text-[10px] leading-tight">www.gesundheits-<br>vergleichdeutschland.de</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Product Description -->
-                  <div class="mt-4 text-gray-700">
-                    <p>
-                      Vit4ever's manganese emerged as the clear
-                      <strong>winner</strong> in our product comparison. Our
-                      editorial team had
-                      <strong
-                        >all quality features confirmed by independent
-                        laboratory analyses</strong
-                      >. Not only does the product offer the best price per
-                      daily dose, it also contains no unnecessary additives, is
-                      produced in Germany, and lasts for a whole year.
-                    </p>
-                    <p class="mt-2">
-                      Read our detailed review of this product below.
-                    </p>
-                  </div>
-
-                  <!-- Price -->
-                  <div class="mt-4">
-                    <strong>Price:</strong>
-                    <span class="text-blue-600">17,99 €</span>
-                  </div>
-                </div>
-
-                <!-- Body Section -->
-                <div class="border-b border-gray-200 py-6">
-                  <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Product Image and Rating -->
-                    <div class="relative">
-                      <!-- Image Placeholder -->
-                      <img src="/image/topRatedImg.webp" />
-
-                      <!-- Rating Circle -->
-                      <div
-                        class="absolute -top-4 -right-4 bg-white rounded-full w-20 h-20 flex flex-col items-center justify-center shadow-md border border-gray-200"
-                      >
-                        <span class="text-2xl font-bold">9.5</span>
-                        <span class="text-xs">out of 10</span>
-                      </div>
-                    </div>
-
-                    <!-- Scores -->
-                    <div class="space-y-4">
-                      <div class="space-y-2">
-                        <div class="flex justify-between">
-                          <strong>Specific quality characteristics</strong>
-                          <span>10/10</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            class="bg-green-500 h-2 rounded-full"
-                            style="width: 100%"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="space-y-2">
-                        <div class="flex justify-between">
-                          <strong>Price/performance ratio</strong>
-                          <span>9/10</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            class="bg-green-500 h-2 rounded-full"
-                            style="width: 90%"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="space-y-2">
-                        <div class="flex justify-between">
-                          <strong>Previous customer experience</strong>
-                          <span>9/10</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            class="bg-green-500 h-2 rounded-full"
-                            style="width: 90%"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="space-y-2">
-                        <div class="flex justify-between">
-                          <strong
-                            >Application & suitability for everyday use</strong
-                          >
-                          <span>10/10</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            class="bg-green-500 h-2 rounded-full"
-                            style="width: 100%"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Pros and Cons -->
-                  <div class="mt-6">
-                    <div class="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h3 class="text-lg font-bold mb-3">Advantages</h3>
-                        <ul class="space-y-2">
-                          <li class="flex items-start">
-                            <i
-                              class="fas fa-check text-green-500 mt-1 mr-2"
-                            ></i>
-                            <span>Extremely good value for money</span>
-                          </li>
-                          <li class="flex items-start">
-                            <i
-                              class="fas fa-check text-green-500 mt-1 mr-2"
-                            ></i>
-                            <span>No unnecessary additives</span>
-                          </li>
-                          <li class="flex items-start">
-                            <i
-                              class="fas fa-check text-green-500 mt-1 mr-2"
-                            ></i>
-                            <span
-                              >Independent laboratory analyses available</span
-                            >
-                          </li>
-                          <li class="flex items-start">
-                            <i
-                              class="fas fa-check text-green-500 mt-1 mr-2"
-                            ></i>
-                            <span>Manufactured in Germany</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 class="text-lg font-bold mb-3">Disadvantages</h3>
-                        <ul>
-                          <li class="flex items-start">
-                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
-                            <span
-                              >Advertising bisglycinate for higher
-                              bioavailability, which is not scientifically
-                              proven</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- CTA Button -->
-                  <div class="mt-6 text-center">
-                    <a
-                      href="#"
-                      class="inline-block bg-body-btn-bg text-white font-medium py-3 px-6 rounded-lg"
-                    >
-                      To the test winner
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Footer Section -->
-                <div class="pt-6">
-                  <h2 class="text-xl font-bold mb-4">Our conclusion</h2>
-                  <div class="text-gray-700 space-y-4">
-                    <p>
-                      <strong
-                        >Our editorial team can give a clear
-                        recommendation</strong
-                      >
-                      to buy the manganese supplement from Vit4ever.
-                    </p>
-                    <p>
-                      Below you will find our detailed test results broken down
-                      according to the five quality criteria mentioned above:
-                    </p>
-
-                    <div class="space-y-4">
-                      <div>
-                        <h3 class="font-bold">
-                          1. Vit4ever relies on a high dosage
-                        </h3>
-                        <p>
-                          The tablets contain a full 10 mg of manganese per
-                          daily dose, so any deficiency can be safely
-                          compensated. If less is needed, the tablets can easily
-                          be split.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h3 class="font-bold">
-                          2. Customers report good tolerability
-                        </h3>
-                        <p>
-                          Many customer reviews mention the ease of taking the
-                          tablets, as they are very small. Furthermore, the
-                          product appears to be well-tolerated.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h3 class="font-bold">
-                          3. Vit4ever relies on a clean label
-                        </h3>
-                        <p>
-                          The manganese tablets are formulated according to the
-                          pure substance principle and therefore do not contain
-                          any unnecessary fillers or additives that could
-                          potentially counteract the health-promoting effects of
-                          the dietary supplement.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h3 class="font-bold">4. Made in Germany</h3>
-                        <p>
-                          With production in Germany, Vit4ever products are
-                          subject not only to EU standards but also to German
-                          quality requirements. Production takes place in GMP
-                          (Good Manufacturing Practice)-certified facilities and
-                          under strict hygiene standards.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h3 class="font-bold">
-                          5. Regular laboratory analyses provide security
-                        </h3>
-                        <p>
-                          Vit4ever products are regularly tested for microbial
-                          contamination, heavy metal content, and actual active
-                          ingredient concentration. The corresponding
-                          certificates are made available to consumers online.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- CTA Button -->
-                  <div class="mt-6 text-center">
-                    <a
-                      href="#"
-                      class="inline-block bg-body-btn-bg text-white font-medium py-3 px-6 rounded-lg"
-                    >
-                      To the test winner
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
 
             <!-- All the products -->
-            <div id="product-container" class="space-y-6 w-full max-w-3xl"></div>
+            <div class="container mx-auto p-4">
+              <div
+                id="product-container"
+                class="space-y-6 w-full max-w-4xl mx-auto"
+              ></div>
+            </div>
             <script src="js/productCard.js"></script>
             <script>
               // Example product data
               const products = [
                 {
-                  place: "2ND PLACE",
-                  title: "manganese",
-                  from: "Fair & Pure",
-                  description: "Fair & Pure's manganese capsules provide 4 mg of manganese per daily dose, making them ideal for anyone who wants to reliably meet their daily intake. The capsules also contain 20 mg of L-leucine, which, due to its effects on energy metabolism and muscle building, is a good complement to manganese. The formulation contains no unnecessary additives, and many consumers find taking the capsules pleasant. Unlike our test winner, however, the manufacturer does not provide laboratory analyses, so this product only ranked second.",
-                  price: "12.95 €",
-                  image: "image/topRatedImgTwo.webp",
+                  place: '1ST PLACE', // Changed to show TEST WINNER badge
+                  title: 'manganese',
+                  from: 'Vit4ever', // Winner brand
+                  description:
+                    "Vit4ever's manganese emerged as the clear winner in our product comparison. Our editorial team had all quality features confirmed by independent laboratory analyses. Not only does the product offer the best price per daily dose, it also contains no unnecessary additives, is produced in Germany, and lasts for a whole year.",
+                  price: '17.99 €',
+                  image: 'image/topRatedImg.webp', // Winner image
                   ratings: [
-                    { label: "Specific quality characteristics", value: 7 },
-                    { label: "Price/performance ratio", value: 7 },
-                    { label: "Previous customer experience", value: 8 },
-                    { label: "Application & suitability", value: 8 },
+                    { label: 'Specific quality characteristics', value: 10 },
+                    { label: 'Price/performance ratio', value: 9 },
+                    { label: 'Previous customer experience', value: 9 },
+                    { label: 'Application & suitability', value: 10 },
+                  ],
+                  badgeRating: 9.5, // Winner rating
+                  advantages: [
+                    'Extremely good value for money',
+                    'No unnecessary additives',
+                    'Independent laboratory analyses available',
+                    'Manufactured in Germany',
+                  ],
+                  disadvantages: [
+                    'Advertising bisglycinate for higher bioavailability, which is not scientifically proven',
+                  ],
+                  productLink: '#',
+                },
+                {
+                  place: '2ND PLACE',
+                  title: 'manganese',
+                  from: 'Fair & Pure',
+                  description:
+                    "Fair & Pure's manganese capsules provide 4 mg of manganese per daily dose, making them ideal for anyone who wants to reliably meet their daily intake. The capsules also contain 20 mg of L-leucine, which, due to its effects on energy metabolism and muscle building, is a good complement to manganese. The formulation contains no unnecessary additives, and many consumers find taking the capsules pleasant. Unlike our test winner, however, the manufacturer does not provide laboratory analyses, so this product only ranked second.",
+                  price: '12.95 €',
+                  image: 'image/topRatedImgTwo.webp',
+                  ratings: [
+                    { label: 'Specific quality characteristics', value: 7 },
+                    { label: 'Price/performance ratio', value: 7 },
+                    { label: 'Previous customer experience', value: 8 },
+                    { label: 'Application & suitability', value: 8 },
                   ],
                   badgeRating: 7.5,
                   advantages: [
-                    "Addition of L-Leucine",
-                    "No unnecessary additives",
-                    "Good value for money",
-                    "Not too concentrated"
+                    'Addition of L-Leucine',
+                    'No unnecessary additives',
+                    'Good value for money',
+                    'Not too concentrated',
                   ],
-                  disadvantages: [
-                    "Laboratory analyses are not available"
-                  ],
-                  productLink: "#"
+                  disadvantages: ['Laboratory analyses are not available'],
+                  productLink: '#',
                 },
 
                 {
-                  place: "3rd PLACE",
-                  title: "manganese",
-                  from: "Greenfood",
-                  description: "Greenfood's manganese supplement contains 10 mg of manganese per daily dose in tablet form and scores highly thanks to its formulation based on the pure substance principle. Consumers note the small size and good tolerability of the tablets. Laboratory tests are mentioned, but unfortunately, they are not further specified or made available for review. However, production in the Netherlands is subject to EU quality standards. Overall, a solid product in the mid-price segment.",
-                  price: "12.95 €",
-                  image: "image/topRatedImgThree.webp",
+                  place: '3rd PLACE',
+                  title: 'manganese',
+                  from: 'Greenfood',
+                  description:
+                    "Greenfood's manganese supplement contains 10 mg of manganese per daily dose in tablet form and scores highly thanks to its formulation based on the pure substance principle. Consumers note the small size and good tolerability of the tablets. Laboratory tests are mentioned, but unfortunately, they are not further specified or made available for review. However, production in the Netherlands is subject to EU quality standards. Overall, a solid product in the mid-price segment.",
+                  price: '12.95 €',
+                  image: 'image/topRatedImgThree.webp',
                   ratings: [
-                    { label: "Specific quality characteristics", value: 6 },
-                    { label: "Price/performance ratio", value: 7 },
-                    { label: "Previous customer experience", value: 8 },
-                    { label: "Application & suitability", value: 7 },
+                    { label: 'Specific quality characteristics', value: 6 },
+                    { label: 'Price/performance ratio', value: 7 },
+                    { label: 'Previous customer experience', value: 8 },
+                    { label: 'Application & suitability', value: 7 },
                   ],
                   badgeRating: 7.5,
                   advantages: [
-                    "No unnecessary additives",
-                    "Fair price-performance ratio"
+                    'No unnecessary additives',
+                    'Fair price-performance ratio',
                   ],
                   disadvantages: [
-                    "No independent laboratory analyses available"
+                    'No independent laboratory analyses available',
                   ],
-                  productLink: "#"
+                  productLink: '#',
                 },
                 {
-                  place: "4th PLACE",
-                  title: "manganese",
-                  from: "fairvital",
-                  description: "Fairvital's manganese capsules provide 10 mg of manganese per daily dose and also contain 10 mg of L-leucine, which can also help with energy production and muscle building. Unfortunately, we don't have sufficient information on internal quality standards, such as laboratory analyses or production conditions. The product also can't compete with its competitors in terms of price, so it only ranked fourth in our comparison.",
-                  price: "14.45 €",
-                  image: "image/topRatedImgFour.webp",
+                  place: '4th PLACE',
+                  title: 'manganese',
+                  from: 'fairvital',
+                  description:
+                    "Fairvital's manganese capsules provide 10 mg of manganese per daily dose and also contain 10 mg of L-leucine, which can also help with energy production and muscle building. Unfortunately, we don't have sufficient information on internal quality standards, such as laboratory analyses or production conditions. The product also can't compete with its competitors in terms of price, so it only ranked fourth in our comparison.",
+                  price: '14.45 €',
+                  image: 'image/topRatedImgFour.webp',
                   ratings: [
-                    { label: "Specific quality characteristics", value: 6 },
-                    { label: "Price/performance ratio", value: 6 },
-                    { label: "Previous customer experience", value: 7 },
-                    { label: "Application & suitability", value: 6 },
+                    { label: 'Specific quality characteristics', value: 6 },
+                    { label: 'Price/performance ratio', value: 6 },
+                    { label: 'Previous customer experience', value: 7 },
+                    { label: 'Application & suitability', value: 6 },
                   ],
-                  badgeRating: 7.5,
+                  badgeRating: 6.25,
                   advantages: [
-                   "Addition of L-Leucine can also support muscle/bone building"
+                    'Addition of L-Leucine can also support muscle/bone building',
                   ],
                   disadvantages: [
-                    "No independent laboratory analyses available",
-                    "High price per daily dose"
+                    'No independent laboratory analyses available',
+                    'High price per daily dose',
                   ],
-                  productLink: "#"
+                  productLink: '#',
                 },
                 {
-                    place: "5th PLACE",
-                    title: "manganese",
-                    from: "VitaMoment",
-                    description: "Compared to the other products, Vitamoment's manganese capsules unfortunately don't impress. Even though they're a high-quality product with regular laboratory analyses, they're by far the most expensive. Since the other products in our comparison are of similar quality but significantly cheaper, Vitamoment simply can't compete.",
-                    price: "12.97 €",
-                    image: "image/topRatedImgFive.webp",
-                    ratings: [
-                        { label: "Specific quality characteristics", value: 7 },
-                        { label: "Price/performance ratio", value: 4 },
-                        { label: "Previous customer experience", value: 7 },
-                        { label: "Application & suitability", value: 6 },
-                    ],
-                    badgeRating: 7.5,
-                    advantages: [
-                         "Combined with vitamin C",
-                         "Independent laboratory analyses available",
-                         "No unnecessary additives",
-
-                    ],
-                    disadvantages: [
-                        "Extremely high price per daily dose",
-                        "Available exclusively in the VitaMoment online shop"
-                    ],
-                    productLink: "#"
-                }
+                  place: '5th PLACE',
+                  title: 'manganese',
+                  from: 'VitaMoment',
+                  description:
+                    "Compared to the other products, Vitamoment's manganese capsules unfortunately don't impress. Even though they're a high-quality product with regular laboratory analyses, they're by far the most expensive. Since the other products in our comparison are of similar quality but significantly cheaper, Vitamoment simply can't compete.",
+                  price: '12.97 €',
+                  image: 'image/topratedImg.webp',
+                  ratings: [
+                    { label: 'Specific quality characteristics', value: 7 },
+                    { label: 'Price/performance ratio', value: 4 },
+                    { label: 'Previous customer experience', value: 7 },
+                    { label: 'Application & suitability', value: 6 },
+                  ],
+                  badgeRating: 6.0,
+                  advantages: [
+                    'Combined with vitamin C',
+                    'Independent laboratory analyses available',
+                    'No unnecessary additives',
+                  ],
+                  disadvantages: [
+                    'Extremely high price per daily dose',
+                    'Available exclusively in the VitaMoment online shop',
+                  ],
+                  productLink: '#',
+                },
               ];
 
               // Render products
-              const container = document.getElementById("product-container");
-              products.forEach(product => {
+              const container = document.getElementById('product-container');
+              products.forEach((product) => {
                 container.innerHTML += createProductCard(product);
               });
-
             </script>
 
-
             <!-- List of Sources -->
-            <div class="p-6 md:p-8 rounded-2xl w-full ">
-              <div class="flex justify-between items-center mb-4 cursor-pointer" onclick="toggleSources()">
-                <h2 class="text-lg md:text-lg font-semibold text-gray-700 uppercase ">List of Sources</h2>
+            <div class="p-6 md:p-8 rounded-2xl w-full">
+              <div
+                class="flex justify-between items-center mb-4 cursor-pointer"
+                onclick="toggleSources()"
+              >
+                <h2
+                  class="text-lg md:text-lg font-semibold text-gray-700 uppercase"
+                >
+                  List of Sources
+                </h2>
                 <button id="toggle-button" class="text-gray-500">
                   <!-- Replaced SVG with Font Awesome icon for the plus button -->
                   <i class="fas fa-plus"></i>
@@ -972,120 +775,136 @@
               </div>
 
               <!-- Collapsible Content -->
-              <div id="sources-container" class="space-y-4 transition-all duration-300 ease-in-out overflow-hidden" style="max-height: 0;">
+              <div
+                id="sources-container"
+                class="space-y-4 transition-all duration-300 ease-in-out overflow-hidden"
+                style="max-height: 0"
+              >
                 <!-- Source Item -->
                 <div id="sources" class="space-y-3"></div>
 
                 <script src="/js/sourceItem.js"></script>
                 <script>
-                   // Data
+                  // Data
                   const sourceItems = [
-
                     {
-                      text: "Holley et al. (2011): Manganese superoxide dismutase: guardian of the powerhouse",
-                      link: "#",
+                      text: 'Holley et al. (2011): Manganese superoxide dismutase: guardian of the powerhouse',
+                      link: '#',
                     },
                     {
-                      text: "EFSA (2010): Scientific Opinion on the substantiation of health claims related to manganese",
-                      link: "#",
+                      text: 'EFSA (2010): Scientific Opinion on the substantiation of health claims related to manganese',
+                      link: '#',
                     },
                     {
-                      text: "Erikson & Aschner (2019): Manganese: Its Role in Disease and Health",
-                      link: "#",
+                      text: 'Erikson & Aschner (2019): Manganese: Its Role in Disease and Health',
+                      link: '#',
                     },
                     {
-                      text: "Haddad et al. (1999): Dietary intake and biochemical, hematologic, and immune status of vegans",
-                      link: "#",
+                      text: 'Haddad et al. (1999): Dietary intake and biochemical, hematologic, and immune status of vegans',
+                      link: '#',
                     },
                     {
-                      text:"Montoro-Huguet et al. (2021): Small and Large Intestine (I): Malabsorption of Nutrients",
-                      link: "#",
+                      text: 'Montoro-Huguet et al. (2021): Small and Large Intestine (I): Malabsorption of Nutrients',
+                      link: '#',
                     },
                     {
-                      text: "Freeland-Graves & Lin (1971): Plasma uptake of manganese as affected by oral loads of manganese, calcium, milk, phosphorus, copper, and zinc",
-                      link: "#",
+                      text: 'Freeland-Graves & Lin (1971): Plasma uptake of manganese as affected by oral loads of manganese, calcium, milk, phosphorus, copper, and zinc',
+                      link: '#',
                     },
                     {
-                      text:"Thomson et al. (1971): Interrelation of intestinal transport system for manganese and iron",
-                      link: "#"
-                    }
+                      text: 'Thomson et al. (1971): Interrelation of intestinal transport system for manganese and iron',
+                      link: '#',
+                    },
                   ];
 
                   // Render them
-                  renderSourceList("sources", sourceItems);
+                  renderSourceList('sources', sourceItems);
                 </script>
-
               </div>
             </div>
 
             <!-- Responsive Grid Container -->
             <div class="container mx-auto">
-              <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">More Articles</h2>
+              <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
+                More Articles
+              </h2>
 
-              <div id="app" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                id="app"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
                 <!-- Cards will be inserted here -->
               </div>
             </div>
 
-
             <script src="/js/appCard.js"></script>
             <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const app = document.getElementById("app");
+              document.addEventListener('DOMContentLoaded', () => {
+                const app = document.getElementById('app');
 
-                if (!app) return console.error("Element with id 'app' not found");
+                if (!app)
+                  return console.error("Element with id 'app' not found");
 
                 // Sample articles data
                 const articles = [
                   {
-                    title: "Pens against nail fungus test winner 2025",
-                    description: "Nail fungus (onychomycosis) is more than a cosmetic problem - many sufferers suffer from feelings of shame and avoid open shoes...",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
+                    title: 'Pens against nail fungus test winner 2025',
+                    description:
+                      'Nail fungus (onychomycosis) is more than a cosmetic problem - many sufferers suffer from feelings of shame and avoid open shoes...',
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
                   },
                   {
-                    title: "Best Skincare Routine 2025",
-                    description: "Discover the top skincare products dermatologists recommend for glowing skin this year.",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
+                    title: 'Best Skincare Routine 2025',
+                    description:
+                      'Discover the top skincare products dermatologists recommend for glowing skin this year.',
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
                   },
                   {
-                    title: "How to Choose the Right Sunscreen",
-                    description: "Not all sunscreens are created equal. Learn what to look for in SPF, ingredients, and protection levels.",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
+                    title: 'How to Choose the Right Sunscreen',
+                    description:
+                      'Not all sunscreens are created equal. Learn what to look for in SPF, ingredients, and protection levels.',
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
                   },
                   {
-                    title: "Top 5 Hair Growth Serums Reviewed",
-                    description: "We tested the most popular serums for hair growth and scalp health. See which one came out on top.",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
+                    title: 'Top 5 Hair Growth Serums Reviewed',
+                    description:
+                      'We tested the most popular serums for hair growth and scalp health. See which one came out on top.',
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
                   },
                   {
-                    title: "Anti-Aging Creams: Do They Work?",
-                    description: "A deep dive into the science & life behind anti-aging  creams  and whether  they deliver real results.",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
+                    title: 'Anti-Aging Creams: Do They Work?',
+                    description:
+                      'A deep dive into the science & life behind anti-aging  creams  and whether  they deliver real results.',
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
                   },
                   {
-                    title: "Natural Remedies for Acne",
-                    description: "Explore effective natural solutions for acne that won't dry out your skin.",
-                    imageUrl: "image/product1.webp",
-                    readMoreLink: "#"
-                  }
+                    title: 'Natural Remedies for Acne',
+                    description:
+                      "Explore effective natural solutions for acne that won't dry out your skin.",
+                    imageUrl: 'image/product1.webp',
+                    readMoreLink: '#',
+                  },
                 ];
 
                 // Generate and insert all cards
-                const cardsHTML = articles.map(article => ArticleCard(article)).join('');
+                const cardsHTML = articles
+                  .map((article) => ArticleCard(article))
+                  .join('');
                 app.innerHTML = cardsHTML;
               });
             </script>
 
-
             <!-- Main Content -->
             <div class="container mx-auto px-6 py-12">
               <div class="flex justify-center">
-                <button class="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-6 rounded-lg shadow transition">
+                <button
+                  class="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-6 rounded-lg shadow transition"
+                >
                   View all
                 </button>
               </div>
@@ -1099,8 +918,8 @@
 
             <!-- Render Footer -->
             <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const footerContainer = document.getElementById("footer");
+              document.addEventListener('DOMContentLoaded', () => {
+                const footerContainer = document.getElementById('footer');
                 if (!footerContainer) return;
 
                 // Insert the footer
@@ -1112,7 +931,10 @@
           <!-- Table of Contents Sidebar -->
           <div class="lg:col-span-1">
             <!-- Desktop Table of Contents -->
-            <div class="hidden lg:block rounded-2xl p-6 sticky top-8" style="background-color: #f2f2f2;">
+            <div
+              class="hidden lg:block rounded-2xl p-6 sticky top-8"
+              style="background-color: #f2f2f2"
+            >
               <h3
                 class="text-lg font-bold text-gray-900 mb-6 flex items-center"
               >
@@ -1156,19 +978,28 @@
           </div>
 
           <!-- Mobile Table of Contents - Sticky Bottom -->
-          <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200" style="background-color: #f2f2f2;">
+          <div
+            class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200"
+            style="background-color: #f2f2f2"
+          >
             <div class="p-4">
               <div class="flex justify-between items-center mb-3">
                 <h3 class="text-sm font-bold text-gray-900 flex items-center">
                   <i class="fas fa-list-ul mr-2 text-gray-600"></i>
                   TABLE OF CONTENTS
                 </h3>
-                <button id="mobile-toc-toggle" class="text-gray-600 focus:outline-none">
+                <button
+                  id="mobile-toc-toggle"
+                  class="text-gray-600 focus:outline-none"
+                >
                   <i class="fas fa-chevron-up"></i>
                 </button>
               </div>
 
-              <nav id="mobile-toc-content" class="space-y-2 max-h-64 overflow-y-auto">
+              <nav
+                id="mobile-toc-content"
+                class="space-y-2 max-h-64 overflow-y-auto"
+              >
                 <a
                   href="#wichtigkeit"
                   class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
@@ -1230,12 +1061,16 @@
           'gruende',
           'qualitaetsmerkmale',
           'testkriterien',
-          'testergebnisse'
+          'testergebnisse',
         ];
 
         // Get both desktop and mobile TOC links
-        const desktopTocLinks = document.querySelectorAll('.lg\\:block nav a[href^="#"]');
-        const mobileTocLinks = document.querySelectorAll('.lg\\:hidden nav a[href^="#"]');
+        const desktopTocLinks = document.querySelectorAll(
+          '.lg\\:block nav a[href^="#"]'
+        );
+        const mobileTocLinks = document.querySelectorAll(
+          '.lg\\:hidden nav a[href^="#"]'
+        );
         let activeSection = null;
 
         // Find the current section in view
@@ -1244,7 +1079,7 @@
           if (section) {
             const rect = section.getBoundingClientRect();
             // Check if section is in viewport (with some offset for better UX)
-            if (rect.top <= 150 && rect.bottom >= 150) {
+            if (rect.top <= 130 && rect.bottom >= 130) {
               activeSection = sectionId;
               break;
             }
@@ -1260,8 +1095,8 @@
             const section = document.getElementById(sectionId);
             if (section) {
               const rect = section.getBoundingClientRect();
-              const distance = Math.abs(rect.top - 150);
-              if (distance < closestDistance && rect.top <= 150) {
+              const distance = Math.abs(rect.top - 130);
+              if (distance < closestDistance && rect.top <= 130) {
                 closestDistance = distance;
                 closestSection = sectionId;
               }
@@ -1271,29 +1106,33 @@
         }
 
         // Update desktop table of contents styling
-        desktopTocLinks.forEach(link => {
+        desktopTocLinks.forEach((link) => {
           const href = link.getAttribute('href').substring(1); // Remove #
           if (href === activeSection) {
-            // Active state - black text with font-weight-600
-            link.className = 'block text-sm text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            // Active state - bold text + black left border
+            link.className =
+              'block text-sm text-black font-medium py-2  border-l-2 border-black pl-2 rounded-r-lg transition-colors';
             link.style.fontWeight = '600';
           } else {
             // Default state
-            link.className = 'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.className =
+              'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 ';
             link.style.fontWeight = '';
           }
         });
 
         // Update mobile table of contents styling
-        mobileTocLinks.forEach(link => {
+        mobileTocLinks.forEach((link) => {
           const href = link.getAttribute('href').substring(1); // Remove #
           if (href === activeSection) {
-            // Active state - black text with font-weight-600
-            link.className = 'block text-xs text-black font-semibold py-2 border-b border-gray-200 px-3 rounded-lg';
+            // Active state - bold text + black left border
+            link.className =
+              'block text-xs text-black font-medium py-2  border-l-3 border-black pl-2 rounded-r-lg transition-colors';
             link.style.fontWeight = '600';
           } else {
             // Default state
-            link.className = 'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200';
+            link.className =
+              'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2';
             link.style.fontWeight = '';
           }
         });
@@ -1347,7 +1186,10 @@
         // Select the Font Awesome icon instead of the SVG
         const buttonIcon = button.querySelector('i');
 
-        if (container.style.maxHeight === '0px' || container.style.maxHeight === '') {
+        if (
+          container.style.maxHeight === '0px' ||
+          container.style.maxHeight === ''
+        ) {
           // Expand the container
           container.style.maxHeight = container.scrollHeight + 'px';
           buttonIcon.style.transform = 'rotate(45deg)';
@@ -1361,18 +1203,20 @@
       function toggleTransparency() {
         const expandedContent = document.getElementById('expandedContent');
         const collapsedSection = document.getElementById('collapsedSection');
-        const plusIcon = collapsedSection.querySelector('.fa-plus');
+        const icon = collapsedSection.querySelector('i:last-child');
 
-        // Toggle visibility
+        // Toggle visibility with transition
         expandedContent.classList.toggle('hidden');
 
-        // Change plus/minus icon
+        // Animate icon rotation
         if (expandedContent.classList.contains('hidden')) {
-          plusIcon.classList.remove('fa-minus');
-          plusIcon.classList.add('fa-plus');
+          icon.classList.remove('fa-minus');
+          icon.classList.add('fa-plus');
+          icon.classList.remove('rotate-180');
         } else {
-          plusIcon.classList.remove('fa-plus');
-          plusIcon.classList.add('fa-minus');
+          icon.classList.remove('fa-plus');
+          icon.classList.add('fa-minus');
+          icon.classList.add('rotate-180');
         }
       }
 
