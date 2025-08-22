@@ -1,7 +1,7 @@
 // Function to create a single source item component
 function createSourceItem({ number, text, link }) {
     return `
-    <div class="flex items-start bg-gray-50 p-4 rounded-xl border border-gray-200">
+    <div class="flex items-start p-4 bg-gray-50 rounded-xl ">
       <span class="inline-flex items-center justify-center h-6 w-6 rounded-full text-xs font-medium text-dark bg-transparent border border-black flex-shrink-0 mr-3">
         ${number}
       </span>

@@ -242,12 +242,50 @@
       </div>
     </section>
     <!-- Product Gallery -->
-    <div class="px-8 flex justify-center items-center -mt-14">
-      <img
-        src="/image/imagetest.webp?height=400&width=600"
-        alt="Manganese Supplement Test Winner"
-        class="rounded-lg shadow-lg w-[900px]"
-      />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Product Gallery - Takes up 2/3 of space on desktop -->
+        <div class="lg:col-span-2 -mt-14">
+          <div class="flex justify-center items-center">
+            <img
+                    src="/image/imagetest.webp?height=400&width=600"
+                    alt="Manganese Supplement Test Winner"
+                    class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 hidden lg:block">
+          <div class="sticky-container relative">
+            <div class="sticky top-20" style="position: sticky; max-height: calc(100vh - 6rem); overflow-y: auto; z-index: 10;">
+              <div class="rounded-2xl p-6 bg-[#f2f2f2]">
+                <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                  <i class="fas fa-list-ul mr-2 text-gray-600"></i>
+                  TABLE OF CONTENTS
+                </h3>
+
+                <nav class="space-y-3">
+                  <a href="#wichtigkeit" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
+                    The importance of manganese for physical health
+                  </a>
+                  <a href="#gruende" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
+                    Common causes of manganese deficiency
+                  </a>
+                  <a href="#qualitaetsmerkmale" class="block text-sm text-red-600 font-semibold py-2 border-b border-gray-200">
+                    Check these 5 quality features before buying a supplement!
+                  </a>
+                  <a href="#testkriterien" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
+                    Additional test criteria
+                  </a>
+                  <a href="#testergebnisse" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">
+                    Our test results
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Main Content -->
@@ -777,7 +815,7 @@
               <!-- Collapsible Content -->
               <div
                 id="sources-container"
-                class="space-y-4 transition-all duration-300 ease-in-out overflow-hidden"
+                class="space-y-4 transition-all duration-600 ease-in-out overflow-hidden"
                 style="max-height: 0"
               >
                 <!-- Source Item -->
@@ -929,58 +967,12 @@
           </div>
 
           <!-- Table of Contents Sidebar -->
-          <div class="lg:col-span-1">
-            <!-- Desktop Table of Contents -->
-            <div
-              class="hidden lg:block rounded-2xl p-6 sticky top-8"
-              style="background-color: #f2f2f2"
-            >
-              <h3
-                class="text-lg font-bold text-gray-900 mb-6 flex items-center"
-              >
-                <i class="fas fa-list-ul mr-2 text-gray-600"></i>
-                TABLE OF CONTENTS
-              </h3>
 
-              <nav class="space-y-3">
-                <a
-                  href="#wichtigkeit"
-                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  The importance of manganese for physical health
-                </a>
-                <a
-                  href="#gruende"
-                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  Common causes of manganese deficiency
-                </a>
-                <a
-                  href="#qualitaetsmerkmale"
-                  class="block text-sm text-red-600 font-semibold py-2 border-b border-gray-200"
-                >
-                  Check these 5 quality features before buying a supplement!
-                </a>
-                <a
-                  href="#testkriterien"
-                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  Additional test criteria
-                </a>
-                <a
-                  href="#testergebnisse"
-                  class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-                >
-                  Our test results
-                </a>
-              </nav>
-            </div>
-          </div>
 
           <!-- Mobile Table of Contents - Sticky Bottom -->
           <div
             class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200"
-            style="background-color: #f2f2f2"
+            style="background-color: #ffffff"
           >
             <div class="p-4">
               <div class="flex justify-between items-center mb-3">
