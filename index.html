@@ -28,6 +28,34 @@
       body {
         font-family: 'PT Sans', sans-serif;
       }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Ensure sticky elements work properly */
+      .sticky-toc {
+        position: sticky;
+        top: 1rem;
+        height: fit-content;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+
+      /* Ensure parent containers don't interfere with sticky positioning */
+      .sticky-parent {
+        height: auto;
+        overflow: visible;
+        align-self: start;
+      }
+
+      /* Fix for sticky positioning in grid layouts */
+      .grid-sticky-container {
+        align-items: flex-start;
+      }
     </style>
     <script>
       tailwind.config = {
@@ -46,7 +74,7 @@
       };
     </script>
   </head>
-  <body class="min-h-screen bg-gray-50">
+  <body class="bg-white leading-relaxed">
     <!--header Section-->
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,8 +175,9 @@
       ></div>
     </header>
 
+
     <!--Hero Section-->
-    <section class="bg-teal-dark text-white py-16 lg:py-24">
+    <section class="bg-teal-dark flex flex-wrap gap-3 text-white py-16 lg:py-24">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
           <div class="flex flex-wrap items-center justify-between mb-6">
@@ -241,796 +270,751 @@
         </div>
       </div>
     </section>
-    <!-- Product Gallery -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-      <div class="grid lg:grid-cols-3 gap-8">
-        <!-- Product Gallery - Takes up 2/3 of space on desktop -->
-        <div class="lg:col-span-2 -mt-14">
-          <div class="flex justify-center items-center">
-            <img
-                    src="/image/imagetest.webp?height=400&width=600"
-                    alt="Manganese Supplement Test Winner"
-                    class="rounded-lg shadow-lg w-full"
-            />
+
+
+    <!-- Article Body Section paste the code of demo.html -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!--Following Div contains sticky TOC and main content-->
+    <div class="grid lg:grid-cols-[1fr_300px] gap-6 -mt-12">
+      <div id = content class="rounded-2xl">
+        <section id="wichtigkeit-double">
+          <!-- Product Gallery -->
+          <div class="w-full">
+            <div class="flex justify-center items-center">
+              <img
+                      src="/image/imagetest.webp?height=400&width=600"
+                      alt="Manganese Supplement Test Winner"
+                      class="rounded-lg shadow-lg w-full"
+              />
+            </div>
           </div>
-        </div>
+          <!-- Transparency Notice -->
+          <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-6">
+            <!-- Collapsed state -->
+            <div
+                    id="collapsedSection"
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleTransparency()"
+            >
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-solid fa-magnifying-glass text-xl"></i>
+                <span class="font-medium text-gray-800"
+                >Transparency is important to us</span
+                >
+              </div>
+              <i
+                      class="fas fa-plus text-gray-500 transition-transform duration-600"
+              ></i>
+            </div>
 
-        <div class="lg:col-span-1 hidden lg:block">
-          <div class="sticky-container relative">
-            <div class="sticky top-20" style="position: sticky; max-height: calc(100vh - 6rem); overflow-y: auto; z-index: 10;">
-              <div class="rounded-2xl p-6 bg-[#f2f2f2]">
-                <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center">
-                  <i class="fas fa-list-ul mr-2 text-gray-600"></i>
-                  TABLE OF CONTENTS
-                </h3>
+            <!-- Expanded content (hidden by default) -->
+            <div
+                    id="expandedContent"
+                    class="hidden mt-4 pt-4 border-t border-gray-100"
+            >
+              <p class="text-gray-600 mb-4">
+                The products tested below were purchased by us at our own
+                expense at the standard IRRP for the creation of this buying
+                guide. All content represents our own opinions, serves to
+                market the tested products, and is not a substitute for
+                medical advice. Please read the "How We Test" and "How We
+                Finance Ourselves" sections for more information about the
+                exact process behind our product comparisons and an overview
+                of our disclosure of financial interests.
+              </p>
 
-                <nav class="space-y-3">
-                  <a href="#wichtigkeit" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
-                    The importance of manganese for physical health
+              <div
+                      class="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0"
+              >
+                <div class="bg-teal-light p-2 rounded-lg">
+                  <a href="#" class="font-medium flex items-center">
+                    <i class="fas fa-flask mr-2"></i> This is how we test
                   </a>
-                  <a href="#gruende" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
-                    Common causes of manganese deficiency
+                </div>
+                <div class="bg-teal-light p-2 rounded-lg">
+                  <a href="#" class="font-medium flex items-center">
+                    <i class="fas fa-hand-holding-usd mr-2"></i> This is how
+                    we finance ourselves
                   </a>
-                  <a href="#qualitaetsmerkmale" class="block text-sm text-red-600 font-semibold py-2 border-b border-gray-200">
-                    Check these 5 quality features before buying a supplement!
-                  </a>
-                  <a href="#testkriterien" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">
-                    Additional test criteria
-                  </a>
-                  <a href="#testergebnisse" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">
-                    Our test results
-                  </a>
-                </nav>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <!-- Quick Navigation -->
+          <div
+                  class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4"
+          >
+            <a
+                    href="#"
+                    class="inline-block w-full text-center px-8 py-3 rounded-full bg-teal-medium text-white font-semibold"
+            >
+              To the test winner
+            </a>
+            <a
+                    href="#"
+                    class="inline-block w-full text-center px-8 py-3 rounded-full border-2 border-teal-medium text-teal-medium font-semibold"
+            >
+              Quality features
+            </a>
+          </div>
 
-    <!-- Main Content -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-2">
-            <!-- Transparency Notice -->
-            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-6">
-              <!-- Collapsed state -->
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              Manganese is an essential trace element that is often
+              underestimated, yet plays a key role in our health. It is
+              involved in important processes such as
+              <strong>energy production</strong>,
+              <strong>bone and cartilage development</strong>, and
+              <strong>protection against oxidative stress</strong>. Although
+              deficiency is rare, certain dietary habits, diseases, or
+              insufficient dietary intake can increase the risk.
+              <strong
+              >Manganese supplements can help compensate for any
+                deficiencies and alleviate health problems</strong
+              >.
+            </p>
+
+            <h2
+                    id="wichtigkeit"
+                    class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            >
+              How important is manganese for physical health
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Manganese is an essential trace element that plays a significant
+              role in numerous physiological processes in the body. It
+              supports antioxidant functions by serving as a cofactor for the
+              enzyme superoxide dismutase and
+              <strong>protects cells from oxidative stress</strong>.
+              Furthermore, manganese contributes significantly to the
+              formation and maintenance of bones and cartilage, making it
+              <strong>essential for bone health</strong>. It is also crucial
+              for
+              <strong>energy metabolism</strong>
+              and lipid metabolism.
+            </p>
+
+            <h2
+                    id="gruende"
+                    class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            >
+              Common reasons for manganese deficiency
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Although rare, a manganese deficiency can still have serious
+              consequences. Symptoms include weakness, fatigue, joint and bone
+              pain, and impaired wound healing. People with
+              <strong>specific dietary habits</strong>, such as those who
+              consume little fresh fruit and vegetables, or those with chronic
+              diseases that can impair nutrient absorption, are particularly
+              at risk.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-4">
+              In addition, inadequate intake often occurs in people with
+              chronic diseases that impair the absorption of nutrients from
+              food. These include intestinal diseases such as Crohn's disease
+              or celiac disease, in which
+              <strong
+              >nutrient absorption in the digestive tract is
+                impaired</strong
+              >.
+              <strong>High calcium intake</strong>
+              or elevated
+              <strong>iron concentrations</strong>, the body can also impair
+              manganese absorption, as these minerals compete with each other
+              and influence each other's absorption.
+            </p>
+
+            <h2
+                    id="praeparate"
+                    class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            >
+              Manganese preparations as support for deficiency symptoms
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-4">
+              A manganese deficiency can be effectively compensated for with
+              targeted dietary supplements. Suitable supplements provide the
+              trace element in a concentrated form, ensuring adequate intake
+              even under special circumstances. Manganese supplements work by
+              directly supplying the body with the necessary trace element.
+              This can alleviate symptoms such as fatigue, bone pain, or
+              impaired wound healing, and promote general health. Although
+              various forms of manganese are used in dietary supplements
+              (e.g.,
+              <strong>manganese bisglycinate</strong>,
+              <strong>manganese gluconate</strong>, or
+              <strong>manganese citrate</strong>), there is still no clear
+              information on the relative bioavailability of the compounds.
+              Therefore, particular attention should be paid to the
+              individual's tolerance of the supplements.
+            </p>
+          </div>
+
+          <!--5 quality features-->
+          <div class="bg-white rounded-lg pt-4" id="qualitaetsmerkmale">
+            <h1 class="text-2xl font-bold text-gray-900 mb-4">
+              Check these 5 quality features before you buy an iron
+              supplement!
+            </h1>
+            <p class="text-gray-600 mb-6">
+              In addition to a fair price, look for these five quality
+              features. If all of these factors are met, you've found a very
+              good manganese supplement.
+            </p>
+
+            <div class="border-t border-gray-200 my-4"></div>
+
+            <!-- Feature 1 -->
+            <div class="feature-item mb-2">
               <div
-                id="collapsedSection"
-                class="flex justify-between items-center cursor-pointer"
-                onclick="toggleTransparency()"
+                      id="feature1-header"
+                      class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50 active-tab"
+                      onclick="toggleFeature(1)"
               >
                 <div class="flex items-center space-x-3">
-                  <i class="fas fa-solid fa-magnifying-glass text-xl"></i>
-                  <span class="font-medium text-gray-800"
-                    >Transparency is important to us</span
-                  >
+                    <span class="font-medium text-gray-800"
+                    >1. Ensure appropriate dosage</span
+                    >
                 </div>
-                <i
-                  class="fas fa-plus text-gray-500 transition-transform duration-600"
-                ></i>
+                <i class="fas fa-plus text-gray-500"></i>
               </div>
-
-              <!-- Expanded content (hidden by default) -->
-              <div
-                id="expandedContent"
-                class="hidden mt-4 pt-4 border-t border-gray-100"
-              >
-                <p class="text-gray-600 mb-4">
-                  The products tested below were purchased by us at our own
-                  expense at the standard IRRP for the creation of this buying
-                  guide. All content represents our own opinions, serves to
-                  market the tested products, and is not a substitute for
-                  medical advice. Please read the "How We Test" and "How We
-                  Finance Ourselves" sections for more information about the
-                  exact process behind our product comparisons and an overview
-                  of our disclosure of financial interests.
+              <div id="feature1-content" class="px-4 pb-4 pt-2">
+                <p class="text-gray-600">
+                  The German Nutrition Society (DGE) recommends a daily intake
+                  of 2-5 mg of manganese. Higher doses can be used in cases of
+                  severe deficiency, as previous concerns have long since been
+                  resolved and manganese is considered safe even in higher
+                  doses. Nevertheless, it is advisable to clarify individual
+                  needs and, if necessary, consider them when selecting a
+                  product.
                 </p>
-
-                <div
-                  class="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0"
-                >
-                  <div class="bg-teal-light p-2 rounded-lg">
-                    <a href="#" class="font-medium flex items-center">
-                      <i class="fas fa-flask mr-2"></i> This is how we test
-                    </a>
-                  </div>
-                  <div class="bg-teal-light p-2 rounded-lg">
-                    <a href="#" class="font-medium flex items-center">
-                      <i class="fas fa-hand-holding-usd mr-2"></i> This is how
-                      we finance ourselves
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
+            <div class="border-t border-gray-200 my-4"></div>
 
-            <!-- Quick Navigation -->
-            <div
-              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4"
-            >
-              <a
-                href="#"
-                class="inline-block w-full text-center px-8 py-3 rounded-full bg-teal-medium text-white font-semibold"
+            <!-- Feature 2 -->
+            <div class="feature-item mb-2">
+              <div
+                      id="feature2-header"
+                      class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
+                      onclick="toggleFeature(2)"
               >
-                To the test winner
-              </a>
-              <a
-                href="#"
-                class="inline-block w-full text-center px-8 py-3 rounded-full border-2 border-teal-medium text-teal-medium font-semibold"
-              >
-                Quality features
-              </a>
+                <div class="flex items-center space-x-3">
+                    <span class="font-medium text-gray-800"
+                    >2. Trust other consumers</span
+                    >
+                </div>
+                <i class="fas fa-plus text-gray-500"></i>
+              </div>
+              <div id="feature2-content" class="hidden px-4 pb-4 pt-2">
+                <p class="text-gray-600">
+                  Content for Trust other consumers would go here. Check
+                  reviews and ratings from verified buyers to gauge product
+                  effectiveness and quality.
+                </p>
+              </div>
             </div>
+            <div class="border-t border-gray-200 my-4"></div>
 
-            <!-- Main Content Text -->
-            <div class="prose prose-lg max-w-none">
-              <p class="text-gray-700 leading-relaxed mb-6">
-                Manganese is an essential trace element that is often
-                underestimated, yet plays a key role in our health. It is
-                involved in important processes such as
-                <strong>energy production</strong>,
-                <strong>bone and cartilage development</strong>, and
-                <strong>protection against oxidative stress</strong>. Although
-                deficiency is rare, certain dietary habits, diseases, or
-                insufficient dietary intake can increase the risk.
-                <strong
-                  >Manganese supplements can help compensate for any
-                  deficiencies and alleviate health problems</strong
-                >.
-              </p>
-
-              <h2
-                id="wichtigkeit"
-                class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            <!-- Feature 3 -->
+            <div class="feature-item mb-2">
+              <div
+                      id="feature3-header"
+                      class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
+                      onclick="toggleFeature(3)"
               >
-                How important is manganese for physical health
-              </h2>
+                <div class="flex items-center space-x-3">
+                    <span class="font-medium text-gray-800"
+                    >3. Avoid unnecessary fillers and additives</span
+                    >
+                </div>
+                <i class="fas fa-plus text-gray-500"></i>
+              </div>
+              <div id="feature3-content" class="hidden px-4 pb-4 pt-2">
+                <p class="text-gray-600">
+                  Content for Avoid unnecessary fillers and additives would go
+                  here. Look for supplements with minimal additional
+                  ingredients.
+                </p>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 my-4"></div>
 
-              <p class="text-gray-700 leading-relaxed mb-4">
-                Manganese is an essential trace element that plays a significant
-                role in numerous physiological processes in the body. It
-                supports antioxidant functions by serving as a cofactor for the
-                enzyme superoxide dismutase and
-                <strong>protects cells from oxidative stress</strong>.
-                Furthermore, manganese contributes significantly to the
-                formation and maintenance of bones and cartilage, making it
-                <strong>essential for bone health</strong>. It is also crucial
-                for
-                <strong>energy metabolism</strong>
-                and lipid metabolism.
-              </p>
-
-              <h2
-                id="gruende"
-                class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            <!-- Feature 4 -->
+            <div class="feature-item mb-2">
+              <div
+                      id="feature4-header"
+                      class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
+                      onclick="toggleFeature(4)"
               >
-                Common reasons for manganese deficiency
-              </h2>
+                <div class="flex items-center space-x-3">
+                    <span class="font-medium text-gray-800"
+                    >4. Trust in products from Germany or the EU</span
+                    >
+                </div>
+                <i class="fas fa-plus text-gray-500"></i>
+              </div>
+              <div id="feature4-content" class="hidden px-4 pb-4 pt-2">
+                <p class="text-gray-600">
+                  Content for Trust in products from Germany or the EU would
+                  go here. EU manufacturing often means higher quality
+                  standards.
+                </p>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 my-4"></div>
 
-              <p class="text-gray-700 leading-relaxed mb-4">
-                Although rare, a manganese deficiency can still have serious
-                consequences. Symptoms include weakness, fatigue, joint and bone
-                pain, and impaired wound healing. People with
-                <strong>specific dietary habits</strong>, such as those who
-                consume little fresh fruit and vegetables, or those with chronic
-                diseases that can impair nutrient absorption, are particularly
-                at risk.
-              </p>
-
-              <p class="text-gray-700 leading-relaxed mb-4">
-                In addition, inadequate intake often occurs in people with
-                chronic diseases that impair the absorption of nutrients from
-                food. These include intestinal diseases such as Crohn's disease
-                or celiac disease, in which
-                <strong
-                  >nutrient absorption in the digestive tract is
-                  impaired</strong
-                >.
-                <strong>High calcium intake</strong>
-                or elevated
-                <strong>iron concentrations</strong>, the body can also impair
-                manganese absorption, as these minerals compete with each other
-                and influence each other's absorption.
-              </p>
-
-              <h2
-                id="praeparate"
-                class="text-2xl font-bold text-gray-900 mb-6 mt-12"
+            <!-- Feature 5 -->
+            <div class="feature-item mb-2">
+              <div
+                      id="feature5-header"
+                      class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
+                      onclick="toggleFeature(5)"
               >
-                Manganese preparations as support for deficiency symptoms
-              </h2>
-
-              <p class="text-gray-700 leading-relaxed mb-4">
-                A manganese deficiency can be effectively compensated for with
-                targeted dietary supplements. Suitable supplements provide the
-                trace element in a concentrated form, ensuring adequate intake
-                even under special circumstances. Manganese supplements work by
-                directly supplying the body with the necessary trace element.
-                This can alleviate symptoms such as fatigue, bone pain, or
-                impaired wound healing, and promote general health. Although
-                various forms of manganese are used in dietary supplements
-                (e.g.,
-                <strong>manganese bisglycinate</strong>,
-                <strong>manganese gluconate</strong>, or
-                <strong>manganese citrate</strong>), there is still no clear
-                information on the relative bioavailability of the compounds.
-                Therefore, particular attention should be paid to the
-                individual's tolerance of the supplements.
-              </p>
+                <div class="flex items-center space-x-3">
+                    <span class="font-medium text-gray-800"
+                    >5. Rely on transparent manufacturers</span
+                    >
+                </div>
+                <i class="fas fa-plus text-gray-500"></i>
+              </div>
+              <div id="feature5-content" class="hidden px-4 pb-4 pt-2">
+                <p class="text-gray-600">
+                  Content for Rely on transparent manufacturers would go here.
+                  Companies that disclose their sourcing and testing practices
+                  are preferable.
+                </p>
+              </div>
             </div>
+            <div class="border-t border-gray-200 my-4"></div>
+          </div>
 
-            <!--5 quality features-->
-            <div class="bg-white rounded-lg pt-4" id="qualitaetsmerkmale">
-              <h1 class="text-2xl font-bold text-gray-900 mb-4">
-                Check these 5 quality features before you buy an iron
-                supplement!
-              </h1>
-              <p class="text-gray-600 mb-6">
-                In addition to a fair price, look for these five quality
-                features. If all of these factors are met, you've found a very
-                good manganese supplement.
-              </p>
-
-              <div class="border-t border-gray-200 my-4"></div>
-
-              <!-- Feature 1 -->
-              <div class="feature-item mb-2">
-                <div
-                  id="feature1-header"
-                  class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50 active-tab"
-                  onclick="toggleFeature(1)"
-                >
-                  <div class="flex items-center space-x-3">
-                    <span class="font-medium text-gray-800"
-                      >1. Ensure appropriate dosage</span
-                    >
-                  </div>
-                  <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <div id="feature1-content" class="px-4 pb-4 pt-2">
-                  <p class="text-gray-600">
-                    The German Nutrition Society (DGE) recommends a daily intake
-                    of 2-5 mg of manganese. Higher doses can be used in cases of
-                    severe deficiency, as previous concerns have long since been
-                    resolved and manganese is considered safe even in higher
-                    doses. Nevertheless, it is advisable to clarify individual
-                    needs and, if necessary, consider them when selecting a
-                    product.
-                  </p>
-                </div>
-              </div>
-              <div class="border-t border-gray-200 my-4"></div>
-
-              <!-- Feature 2 -->
-              <div class="feature-item mb-2">
-                <div
-                  id="feature2-header"
-                  class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
-                  onclick="toggleFeature(2)"
-                >
-                  <div class="flex items-center space-x-3">
-                    <span class="font-medium text-gray-800"
-                      >2. Trust other consumers</span
-                    >
-                  </div>
-                  <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <div id="feature2-content" class="hidden px-4 pb-4 pt-2">
-                  <p class="text-gray-600">
-                    Content for Trust other consumers would go here. Check
-                    reviews and ratings from verified buyers to gauge product
-                    effectiveness and quality.
-                  </p>
-                </div>
-              </div>
-              <div class="border-t border-gray-200 my-4"></div>
-
-              <!-- Feature 3 -->
-              <div class="feature-item mb-2">
-                <div
-                  id="feature3-header"
-                  class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
-                  onclick="toggleFeature(3)"
-                >
-                  <div class="flex items-center space-x-3">
-                    <span class="font-medium text-gray-800"
-                      >3. Avoid unnecessary fillers and additives</span
-                    >
-                  </div>
-                  <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <div id="feature3-content" class="hidden px-4 pb-4 pt-2">
-                  <p class="text-gray-600">
-                    Content for Avoid unnecessary fillers and additives would go
-                    here. Look for supplements with minimal additional
-                    ingredients.
-                  </p>
-                </div>
-              </div>
-              <div class="border-t border-gray-200 my-4"></div>
-
-              <!-- Feature 4 -->
-              <div class="feature-item mb-2">
-                <div
-                  id="feature4-header"
-                  class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
-                  onclick="toggleFeature(4)"
-                >
-                  <div class="flex items-center space-x-3">
-                    <span class="font-medium text-gray-800"
-                      >4. Trust in products from Germany or the EU</span
-                    >
-                  </div>
-                  <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <div id="feature4-content" class="hidden px-4 pb-4 pt-2">
-                  <p class="text-gray-600">
-                    Content for Trust in products from Germany or the EU would
-                    go here. EU manufacturing often means higher quality
-                    standards.
-                  </p>
-                </div>
-              </div>
-              <div class="border-t border-gray-200 my-4"></div>
-
-              <!-- Feature 5 -->
-              <div class="feature-item mb-2">
-                <div
-                  id="feature5-header"
-                  class="flex justify-between items-center p-4 rounded-lg cursor-pointer hover:bg-gray-50"
-                  onclick="toggleFeature(5)"
-                >
-                  <div class="flex items-center space-x-3">
-                    <span class="font-medium text-gray-800"
-                      >5. Rely on transparent manufacturers</span
-                    >
-                  </div>
-                  <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <div id="feature5-content" class="hidden px-4 pb-4 pt-2">
-                  <p class="text-gray-600">
-                    Content for Rely on transparent manufacturers would go here.
-                    Companies that disclose their sourcing and testing practices
-                    are preferable.
-                  </p>
-                </div>
-              </div>
-              <div class="border-t border-gray-200 my-4"></div>
-            </div>
-
-            <!--Further Test criteria-->
-            <div class="max-w-3xl mx-auto bg-white" id="testkriterien">
-              <h1 class="text-2xl font-bold text-gray-900 mb-4">
-                Further test criteria
-              </h1>
-              <p class="text-gray-600 mb-6">
-                In order to identify the best and most affordable manganese
-                supplements for you, our editorial team researched a selection
-                of supplements in online shops, reputable online pharmacies, and
-                marketplaces and ordered them for extensive testing based on
-                sales figures and verified customer reviews.
-              </p>
-
-              <p class="text-gray-600 mb-6 font-medium">
-                The following test results and rankings were based on the
-                following criteria:
-              </p>
-
-              <ul class="space-y-4 list-disc pl-5 text-gray-600">
-                <li class="pl-2">
-                  <strong>Specific quality characteristics:</strong> To what
-                  extent did the product meet the above-mentioned specific
-                  quality characteristics?
-                </li>
-                <li class="pl-2">
-                  <strong>Price/performance ratio:</strong> How can the added
-                  value of the product be assessed in comparison to the relative
-                  price point based on our testing experience?
-                </li>
-                <li class="pl-2">
-                  <strong>Previous customer experience:</strong> What reputation
-                  does the provider behind the product have in the market? How
-                  do previous customers rate the product on independent review
-                  platforms.
-                </li>
-                <li class="pl-2">
-                  <strong>Application & suitability for everyday use:</strong>
-                  How practical is the application of the product based on our
-                  test experience?
-                </li>
-              </ul>
-            </div>
-
-            <h1
-              class="mt-6 ml-4 text-2xl font-bold text-gray-900 mb-4 py-10 md:py-12"
-              id="testergebnisse"
-            >
-              Our Test Results
+          <!--Further Test criteria-->
+          <div class="max-w-3xl mx-auto bg-white" id="testkriterien">
+            <h1 class="text-2xl font-bold text-gray-900 mb-4">
+              Further test criteria
             </h1>
+            <p class="text-gray-600 mb-6">
+              In order to identify the best and most affordable manganese
+              supplements for you, our editorial team researched a selection
+              of supplements in online shops, reputable online pharmacies, and
+              marketplaces and ordered them for extensive testing based on
+              sales figures and verified customer reviews.
+            </p>
 
-            <!-- All the products -->
-            <div class="container mx-auto p-4">
-              <div
-                id="product-container"
-                class="space-y-6 w-full max-w-4xl mx-auto"
-              ></div>
-            </div>
-            <script src="js/productCard.js"></script>
-            <script>
-              // Example product data
-              const products = [
-                {
-                  place: '1ST PLACE', // Changed to show TEST WINNER badge
-                  title: 'manganese',
-                  from: 'Vit4ever', // Winner brand
-                  description:
-                    "Vit4ever's manganese emerged as the clear winner in our product comparison. Our editorial team had all quality features confirmed by independent laboratory analyses. Not only does the product offer the best price per daily dose, it also contains no unnecessary additives, is produced in Germany, and lasts for a whole year.",
-                  price: '17.99 €',
-                  image: 'image/topRatedImg.webp', // Winner image
-                  ratings: [
-                    { label: 'Specific quality characteristics', value: 10 },
-                    { label: 'Price/performance ratio', value: 9 },
-                    { label: 'Previous customer experience', value: 9 },
-                    { label: 'Application & suitability', value: 10 },
-                  ],
-                  badgeRating: 9.5, // Winner rating
-                  advantages: [
-                    'Extremely good value for money',
-                    'No unnecessary additives',
-                    'Independent laboratory analyses available',
-                    'Manufactured in Germany',
-                  ],
-                  disadvantages: [
-                    'Advertising bisglycinate for higher bioavailability, which is not scientifically proven',
-                  ],
-                  productLink: '#',
-                },
-                {
-                  place: '2ND PLACE',
-                  title: 'manganese',
-                  from: 'Fair & Pure',
-                  description:
-                    "Fair & Pure's manganese capsules provide 4 mg of manganese per daily dose, making them ideal for anyone who wants to reliably meet their daily intake. The capsules also contain 20 mg of L-leucine, which, due to its effects on energy metabolism and muscle building, is a good complement to manganese. The formulation contains no unnecessary additives, and many consumers find taking the capsules pleasant. Unlike our test winner, however, the manufacturer does not provide laboratory analyses, so this product only ranked second.",
-                  price: '12.95 €',
-                  image: 'image/topRatedImgTwo.webp',
-                  ratings: [
-                    { label: 'Specific quality characteristics', value: 7 },
-                    { label: 'Price/performance ratio', value: 7 },
-                    { label: 'Previous customer experience', value: 8 },
-                    { label: 'Application & suitability', value: 8 },
-                  ],
-                  badgeRating: 7.5,
-                  advantages: [
-                    'Addition of L-Leucine',
-                    'No unnecessary additives',
-                    'Good value for money',
-                    'Not too concentrated',
-                  ],
-                  disadvantages: ['Laboratory analyses are not available'],
-                  productLink: '#',
-                },
+            <p class="text-gray-600 mb-6 font-medium">
+              The following test results and rankings were based on the
+              following criteria:
+            </p>
 
-                {
-                  place: '3rd PLACE',
-                  title: 'manganese',
-                  from: 'Greenfood',
-                  description:
-                    "Greenfood's manganese supplement contains 10 mg of manganese per daily dose in tablet form and scores highly thanks to its formulation based on the pure substance principle. Consumers note the small size and good tolerability of the tablets. Laboratory tests are mentioned, but unfortunately, they are not further specified or made available for review. However, production in the Netherlands is subject to EU quality standards. Overall, a solid product in the mid-price segment.",
-                  price: '12.95 €',
-                  image: 'image/topRatedImgThree.webp',
-                  ratings: [
-                    { label: 'Specific quality characteristics', value: 6 },
-                    { label: 'Price/performance ratio', value: 7 },
-                    { label: 'Previous customer experience', value: 8 },
-                    { label: 'Application & suitability', value: 7 },
-                  ],
-                  badgeRating: 7.5,
-                  advantages: [
-                    'No unnecessary additives',
-                    'Fair price-performance ratio',
-                  ],
-                  disadvantages: [
-                    'No independent laboratory analyses available',
-                  ],
-                  productLink: '#',
-                },
-                {
-                  place: '4th PLACE',
-                  title: 'manganese',
-                  from: 'fairvital',
-                  description:
-                    "Fairvital's manganese capsules provide 10 mg of manganese per daily dose and also contain 10 mg of L-leucine, which can also help with energy production and muscle building. Unfortunately, we don't have sufficient information on internal quality standards, such as laboratory analyses or production conditions. The product also can't compete with its competitors in terms of price, so it only ranked fourth in our comparison.",
-                  price: '14.45 €',
-                  image: 'image/topRatedImgFour.webp',
-                  ratings: [
-                    { label: 'Specific quality characteristics', value: 6 },
-                    { label: 'Price/performance ratio', value: 6 },
-                    { label: 'Previous customer experience', value: 7 },
-                    { label: 'Application & suitability', value: 6 },
-                  ],
-                  badgeRating: 6.25,
-                  advantages: [
-                    'Addition of L-Leucine can also support muscle/bone building',
-                  ],
-                  disadvantages: [
-                    'No independent laboratory analyses available',
-                    'High price per daily dose',
-                  ],
-                  productLink: '#',
-                },
-                {
-                  place: '5th PLACE',
-                  title: 'manganese',
-                  from: 'VitaMoment',
-                  description:
-                    "Compared to the other products, Vitamoment's manganese capsules unfortunately don't impress. Even though they're a high-quality product with regular laboratory analyses, they're by far the most expensive. Since the other products in our comparison are of similar quality but significantly cheaper, Vitamoment simply can't compete.",
-                  price: '12.97 €',
-                  image: 'image/topratedImg.webp',
-                  ratings: [
-                    { label: 'Specific quality characteristics', value: 7 },
-                    { label: 'Price/performance ratio', value: 4 },
-                    { label: 'Previous customer experience', value: 7 },
-                    { label: 'Application & suitability', value: 6 },
-                  ],
-                  badgeRating: 6.0,
-                  advantages: [
-                    'Combined with vitamin C',
-                    'Independent laboratory analyses available',
-                    'No unnecessary additives',
-                  ],
-                  disadvantages: [
-                    'Extremely high price per daily dose',
-                    'Available exclusively in the VitaMoment online shop',
-                  ],
-                  productLink: '#',
-                },
-              ];
+            <ul class="space-y-4 list-disc pl-5 text-gray-600">
+              <li class="pl-2">
+                <strong>Specific quality characteristics:</strong> To what
+                extent did the product meet the above-mentioned specific
+                quality characteristics?
+              </li>
+              <li class="pl-2">
+                <strong>Price/performance ratio:</strong> How can the added
+                value of the product be assessed in comparison to the relative
+                price point based on our testing experience?
+              </li>
+              <li class="pl-2">
+                <strong>Previous customer experience:</strong> What reputation
+                does the provider behind the product have in the market? How
+                do previous customers rate the product on independent review
+                platforms.
+              </li>
+              <li class="pl-2">
+                <strong>Application & suitability for everyday use:</strong>
+                How practical is the application of the product based on our
+                test experience?
+              </li>
+            </ul>
+          </div>
 
-              // Render products
-              const container = document.getElementById('product-container');
-              products.forEach((product) => {
-                container.innerHTML += createProductCard(product);
-              });
-            </script>
+          <h1
+                  class="mt-6 ml-4 text-2xl font-bold text-gray-900 mb-4 py-10 md:py-12"
+                  id="testergebnisse"
+          >
+            Our Test Results
+          </h1>
 
-            <!-- List of Sources -->
-            <div class="p-6 md:p-8 rounded-2xl w-full">
-              <div
-                class="flex justify-between items-center mb-4 cursor-pointer"
-                onclick="toggleSources()"
+          <!-- All the products -->
+          <div class="container mx-auto p-4">
+            <div
+                    id="product-container"
+                    class="space-y-6 w-full max-w-4xl mx-auto"
+            ></div>
+          </div>
+          <script src="js/productCard.js"></script>
+          <script>
+            // Example product data
+            const products = [
+              {
+                place: '1ST PLACE', // Changed to show TEST WINNER badge
+                title: 'manganese',
+                from: 'Vit4ever', // Winner brand
+                description:
+                        "Vit4ever's manganese emerged as the clear winner in our product comparison. Our editorial team had all quality features confirmed by independent laboratory analyses. Not only does the product offer the best price per daily dose, it also contains no unnecessary additives, is produced in Germany, and lasts for a whole year.",
+                price: '17.99 €',
+                image: 'image/topRatedImg.webp', // Winner image
+                ratings: [
+                  { label: 'Specific quality characteristics', value: 10 },
+                  { label: 'Price/performance ratio', value: 9 },
+                  { label: 'Previous customer experience', value: 9 },
+                  { label: 'Application & suitability', value: 10 },
+                ],
+                badgeRating: 9.5, // Winner rating
+                advantages: [
+                  'Extremely good value for money',
+                  'No unnecessary additives',
+                  'Independent laboratory analyses available',
+                  'Manufactured in Germany',
+                ],
+                disadvantages: [
+                  'Advertising bisglycinate for higher bioavailability, which is not scientifically proven',
+                ],
+                productLink: '#',
+              },
+              {
+                place: '2ND PLACE',
+                title: 'manganese',
+                from: 'Fair & Pure',
+                description:
+                        "Fair & Pure's manganese capsules provide 4 mg of manganese per daily dose, making them ideal for anyone who wants to reliably meet their daily intake. The capsules also contain 20 mg of L-leucine, which, due to its effects on energy metabolism and muscle building, is a good complement to manganese. The formulation contains no unnecessary additives, and many consumers find taking the capsules pleasant. Unlike our test winner, however, the manufacturer does not provide laboratory analyses, so this product only ranked second.",
+                price: '12.95 €',
+                image: 'image/topRatedImgTwo.webp',
+                ratings: [
+                  { label: 'Specific quality characteristics', value: 7 },
+                  { label: 'Price/performance ratio', value: 7 },
+                  { label: 'Previous customer experience', value: 8 },
+                  { label: 'Application & suitability', value: 8 },
+                ],
+                badgeRating: 7.5,
+                advantages: [
+                  'Addition of L-Leucine',
+                  'No unnecessary additives',
+                  'Good value for money',
+                  'Not too concentrated',
+                ],
+                disadvantages: ['Laboratory analyses are not available'],
+                productLink: '#',
+              },
+
+              {
+                place: '3rd PLACE',
+                title: 'manganese',
+                from: 'Greenfood',
+                description:
+                        "Greenfood's manganese supplement contains 10 mg of manganese per daily dose in tablet form and scores highly thanks to its formulation based on the pure substance principle. Consumers note the small size and good tolerability of the tablets. Laboratory tests are mentioned, but unfortunately, they are not further specified or made available for review. However, production in the Netherlands is subject to EU quality standards. Overall, a solid product in the mid-price segment.",
+                price: '12.95 €',
+                image: 'image/topRatedImgThree.webp',
+                ratings: [
+                  { label: 'Specific quality characteristics', value: 6 },
+                  { label: 'Price/performance ratio', value: 7 },
+                  { label: 'Previous customer experience', value: 8 },
+                  { label: 'Application & suitability', value: 7 },
+                ],
+                badgeRating: 7.5,
+                advantages: [
+                  'No unnecessary additives',
+                  'Fair price-performance ratio',
+                ],
+                disadvantages: [
+                  'No independent laboratory analyses available',
+                ],
+                productLink: '#',
+              },
+              {
+                place: '4th PLACE',
+                title: 'manganese',
+                from: 'fairvital',
+                description:
+                        "Fairvital's manganese capsules provide 10 mg of manganese per daily dose and also contain 10 mg of L-leucine, which can also help with energy production and muscle building. Unfortunately, we don't have sufficient information on internal quality standards, such as laboratory analyses or production conditions. The product also can't compete with its competitors in terms of price, so it only ranked fourth in our comparison.",
+                price: '14.45 €',
+                image: 'image/topRatedImgFour.webp',
+                ratings: [
+                  { label: 'Specific quality characteristics', value: 6 },
+                  { label: 'Price/performance ratio', value: 6 },
+                  { label: 'Previous customer experience', value: 7 },
+                  { label: 'Application & suitability', value: 6 },
+                ],
+                badgeRating: 6.25,
+                advantages: [
+                  'Addition of L-Leucine can also support muscle/bone building',
+                ],
+                disadvantages: [
+                  'No independent laboratory analyses available',
+                  'High price per daily dose',
+                ],
+                productLink: '#',
+              },
+              {
+                place: '5th PLACE',
+                title: 'manganese',
+                from: 'VitaMoment',
+                description:
+                        "Compared to the other products, Vitamoment's manganese capsules unfortunately don't impress. Even though they're a high-quality product with regular laboratory analyses, they're by far the most expensive. Since the other products in our comparison are of similar quality but significantly cheaper, Vitamoment simply can't compete.",
+                price: '12.97 €',
+                image: 'image/topratedImg.webp',
+                ratings: [
+                  { label: 'Specific quality characteristics', value: 7 },
+                  { label: 'Price/performance ratio', value: 4 },
+                  { label: 'Previous customer experience', value: 7 },
+                  { label: 'Application & suitability', value: 6 },
+                ],
+                badgeRating: 6.0,
+                advantages: [
+                  'Combined with vitamin C',
+                  'Independent laboratory analyses available',
+                  'No unnecessary additives',
+                ],
+                disadvantages: [
+                  'Extremely high price per daily dose',
+                  'Available exclusively in the VitaMoment online shop',
+                ],
+                productLink: '#',
+              },
+            ];
+
+            // Render products
+            const container = document.getElementById('product-container');
+            products.forEach((product) => {
+              container.innerHTML += createProductCard(product);
+            });
+          </script>
+
+          <!-- List of Sources -->
+          <div class="p-6 md:p-8 rounded-2xl w-full">
+            <div
+                    class="flex justify-between items-center mb-4 cursor-pointer"
+                    onclick="toggleSources()"
+            >
+              <h2
+                      class="text-lg md:text-lg font-semibold text-gray-700 uppercase"
               >
-                <h2
-                  class="text-lg md:text-lg font-semibold text-gray-700 uppercase"
-                >
-                  List of Sources
-                </h2>
-                <button id="toggle-button" class="text-gray-500">
-                  <!-- Replaced SVG with Font Awesome icon for the plus button -->
-                  <i class="fas fa-plus"></i>
-                </button>
-              </div>
-
-              <!-- Collapsible Content -->
-              <div
-                id="sources-container"
-                class="space-y-4 transition-all duration-600 ease-in-out overflow-hidden"
-                style="max-height: 0"
-              >
-                <!-- Source Item -->
-                <div id="sources" class="space-y-3"></div>
-
-                <script src="/js/sourceItem.js"></script>
-                <script>
-                  // Data
-                  const sourceItems = [
-                    {
-                      text: 'Holley et al. (2011): Manganese superoxide dismutase: guardian of the powerhouse',
-                      link: '#',
-                    },
-                    {
-                      text: 'EFSA (2010): Scientific Opinion on the substantiation of health claims related to manganese',
-                      link: '#',
-                    },
-                    {
-                      text: 'Erikson & Aschner (2019): Manganese: Its Role in Disease and Health',
-                      link: '#',
-                    },
-                    {
-                      text: 'Haddad et al. (1999): Dietary intake and biochemical, hematologic, and immune status of vegans',
-                      link: '#',
-                    },
-                    {
-                      text: 'Montoro-Huguet et al. (2021): Small and Large Intestine (I): Malabsorption of Nutrients',
-                      link: '#',
-                    },
-                    {
-                      text: 'Freeland-Graves & Lin (1971): Plasma uptake of manganese as affected by oral loads of manganese, calcium, milk, phosphorus, copper, and zinc',
-                      link: '#',
-                    },
-                    {
-                      text: 'Thomson et al. (1971): Interrelation of intestinal transport system for manganese and iron',
-                      link: '#',
-                    },
-                  ];
-
-                  // Render them
-                  renderSourceList('sources', sourceItems);
-                </script>
-              </div>
-            </div>
-
-            <!-- Responsive Grid Container -->
-            <div class="container mx-auto">
-              <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
-                More Articles
+                List of Sources
               </h2>
-
-              <div
-                id="app"
-                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              >
-                <!-- Cards will be inserted here -->
-              </div>
+              <button id="toggle-button" class="text-gray-500">
+                <!-- Replaced SVG with Font Awesome icon for the plus button -->
+                <i class="fas fa-plus"></i>
+              </button>
             </div>
 
-            <script src="/js/appCard.js"></script>
-            <script>
-              document.addEventListener('DOMContentLoaded', () => {
-                const app = document.getElementById('app');
+            <!-- Collapsible Content -->
+            <div
+                    id="sources-container"
+                    class="space-y-4 transition-all duration-600 ease-in-out overflow-hidden"
+                    style="max-height: 0"
+            >
+              <!-- Source Item -->
+              <div id="sources" class="space-y-3"></div>
 
-                if (!app)
-                  return console.error("Element with id 'app' not found");
-
-                // Sample articles data
-                const articles = [
+              <script src="/js/sourceItem.js"></script>
+              <script>
+                // Data
+                const sourceItems = [
                   {
-                    title: 'Pens against nail fungus test winner 2025',
-                    description:
-                      'Nail fungus (onychomycosis) is more than a cosmetic problem - many sufferers suffer from feelings of shame and avoid open shoes...',
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'Holley et al. (2011): Manganese superoxide dismutase: guardian of the powerhouse',
+                    link: '#',
                   },
                   {
-                    title: 'Best Skincare Routine 2025',
-                    description:
-                      'Discover the top skincare products dermatologists recommend for glowing skin this year.',
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'EFSA (2010): Scientific Opinion on the substantiation of health claims related to manganese',
+                    link: '#',
                   },
                   {
-                    title: 'How to Choose the Right Sunscreen',
-                    description:
-                      'Not all sunscreens are created equal. Learn what to look for in SPF, ingredients, and protection levels.',
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'Erikson & Aschner (2019): Manganese: Its Role in Disease and Health',
+                    link: '#',
                   },
                   {
-                    title: 'Top 5 Hair Growth Serums Reviewed',
-                    description:
-                      'We tested the most popular serums for hair growth and scalp health. See which one came out on top.',
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'Haddad et al. (1999): Dietary intake and biochemical, hematologic, and immune status of vegans',
+                    link: '#',
                   },
                   {
-                    title: 'Anti-Aging Creams: Do They Work?',
-                    description:
-                      'A deep dive into the science & life behind anti-aging  creams  and whether  they deliver real results.',
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'Montoro-Huguet et al. (2021): Small and Large Intestine (I): Malabsorption of Nutrients',
+                    link: '#',
                   },
                   {
-                    title: 'Natural Remedies for Acne',
-                    description:
-                      "Explore effective natural solutions for acne that won't dry out your skin.",
-                    imageUrl: 'image/product1.webp',
-                    readMoreLink: '#',
+                    text: 'Freeland-Graves & Lin (1971): Plasma uptake of manganese as affected by oral loads of manganese, calcium, milk, phosphorus, copper, and zinc',
+                    link: '#',
+                  },
+                  {
+                    text: 'Thomson et al. (1971): Interrelation of intestinal transport system for manganese and iron',
+                    link: '#',
                   },
                 ];
 
-                // Generate and insert all cards
-                const cardsHTML = articles
-                  .map((article) => ArticleCard(article))
-                  .join('');
-                app.innerHTML = cardsHTML;
-              });
-            </script>
-
-            <!-- Main Content -->
-            <div class="container mx-auto px-6 py-12">
-              <div class="flex justify-center">
-                <button
-                  class="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-6 rounded-lg shadow transition"
-                >
-                  View all
-                </button>
-              </div>
-
-              <!-- Footer will be inserted here -->
-              <div id="footer"></div>
+                // Render them
+                renderSourceList('sources', sourceItems);
+              </script>
             </div>
-
-            <!-- Load Footer Component -->
-            <script src="js/footer.js"></script>
-
-            <!-- Render Footer -->
-            <script>
-              document.addEventListener('DOMContentLoaded', () => {
-                const footerContainer = document.getElementById('footer');
-                if (!footerContainer) return;
-
-                // Insert the footer
-                footerContainer.innerHTML = Footer();
-              });
-            </script>
           </div>
 
-          <!-- Table of Contents Sidebar -->
+          <!-- Responsive Grid Container -->
+          <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
+              More Articles
+            </h2>
 
+            <div
+                    id="app"
+                    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Cards will be inserted here -->
+            </div>
+          </div>
+          <script src="/js/appCard.js"></script>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const app = document.getElementById('app');
 
-          <!-- Mobile Table of Contents - Sticky Bottom -->
-          <div
-            class="lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg border-t border-gray-200"
-            style="background-color: #ffffff"
-          >
-            <div class="p-4">
-              <div class="flex justify-between items-center mb-3">
-                <h3 class="text-sm font-bold text-gray-900 flex items-center">
-                  <i class="fas fa-list-ul mr-2 text-gray-600"></i>
-                  TABLE OF CONTENTS
-                </h3>
-                <button
-                  id="mobile-toc-toggle"
-                  class="text-gray-600 focus:outline-none"
-                >
-                  <i class="fas fa-chevron-up"></i>
-                </button>
-              </div>
+              if (!app)
+                return console.error("Element with id 'app' not found");
 
-              <nav
-                id="mobile-toc-content"
-                class="space-y-2 max-h-64 overflow-y-auto"
+              // Sample articles data
+              const articles = [
+                {
+                  title: 'Pens against nail fungus test winner 2025',
+                  description:
+                          'Nail fungus (onychomycosis) is more than a cosmetic problem - many sufferers suffer from feelings of shame and avoid open shoes...',
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+                {
+                  title: 'Best Skincare Routine 2025',
+                  description:
+                          'Discover the top skincare products dermatologists recommend for glowing skin this year.',
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+                {
+                  title: 'How to Choose the Right Sunscreen',
+                  description:
+                          'Not all sunscreens are created equal. Learn what to look for in SPF, ingredients, and protection levels.',
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+                {
+                  title: 'Top 5 Hair Growth Serums Reviewed',
+                  description:
+                          'We tested the most popular serums for hair growth and scalp health. See which one came out on top.',
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+                {
+                  title: 'Anti-Aging Creams: Do They Work?',
+                  description:
+                          'A deep dive into the science & life behind anti-aging  creams  and whether  they deliver real results.',
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+                {
+                  title: 'Natural Remedies for Acne',
+                  description:
+                          "Explore effective natural solutions for acne that won't dry out your skin.",
+                  imageUrl: 'image/product1.webp',
+                  readMoreLink: '#',
+                },
+              ];
+
+              // Generate and insert all cards
+              const cardsHTML = articles
+                      .map((article) => ArticleCard(article))
+                      .join('');
+              app.innerHTML = cardsHTML;
+            });
+          </script>
+
+          <!-- Main Content -->
+          <div class="container mx-auto px-6 py-12">
+            <div class="flex justify-center">
+              <button
+                      class="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-6 rounded-lg shadow transition"
               >
-                <a
-                  href="#wichtigkeit"
-                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  The importance of manganese for physical health
-                </a>
-                <a
-                  href="#gruende"
-                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  Common causes of manganese deficiency
-                </a>
-                <a
-                  href="#qualitaetsmerkmale"
-                  class="block text-xs text-red-600 font-semibold py-2 border-b border-gray-200"
-                >
-                  Check these 5 quality features before buying a supplement!
-                </a>
-                <a
-                  href="#testkriterien"
-                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200"
-                >
-                  Additional test criteria
-                </a>
-                <a
-                  href="#testergebnisse"
-                  class="block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2"
-                >
-                  Our test results
-                </a>
-              </nav>
+                View all
+              </button>
             </div>
+
+            <!-- Footer will be inserted here -->
+            <div id="footer"></div>
           </div>
 
-          <!--quick menu button-->
-        </div>
-      </div>
-    </section>
 
+        </section>
+      </div>
+
+      <!-- Desktop Table of Contents -->
+      <aside class="hidden lg:block">
+        <div class="sticky top-20 h-fit">
+          <div
+                  class="rounded-2xl p-6 bg-[#f2f2f2] max-h-[calc(100vh-6rem)] overflow-y-auto"
+          >
+            <h3
+                    class="text-lg font-bold text-gray-900 mb-6 flex items-center"
+            >
+              <i class="fas fa-list-ul mr-2 text-gray-600"></i>
+              TABLE OF CONTENTS
+            </h3>
+
+            <nav class="space-y-3">
+              <a href="#wichtigkeit" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">The importance of manganese</a>
+              <a href="#gruende" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">Causes of deficiency</a>
+              <a href="#qualitaetsmerkmale" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">5 Quality features</a>
+              <a href="#testkriterien" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">Test criteria</a>
+              <a href="#testergebnisse" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 border-b border-gray-200">Test results</a>
+            </nav>
+          </div>
+        </div>
+      </aside>
+    </div>
+    </div>
+
+
+    <!-- Mobile Table of Contents -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 m-4">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-4">
+        <div
+                class="flex justify-between items-center cursor-pointer"
+                onclick="toggleMobileTOC()"
+        >
+          <h3 class="text-base font-bold text-gray-900 flex items-center">
+            <i class="fas fa-list-ul mr-2 text-gray-600"></i>
+            TABLE OF CONTENTS
+          </h3>
+          <i id="mobile-toc-icon" class="fas fa-chevron-down text-gray-500"></i>
+        </div>
+
+        <nav
+                id="mobile-toc-nav"
+                class="hidden mt-3 space-y-2 max-h-64 overflow-y-auto"
+        >
+          <a href="#wichtigkeit" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">The importance of manganese</a>
+          <a href="#gruende" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">Causes of deficiency</a>
+          <a href="#qualitaetsmerkmale" onclick="closeMobileTOC()" class="block text-sm text-red-600 font-semibold py-2 px-2 hover:bg-gray-50 rounded">5 Quality features</a>
+          <a href="#testkriterien" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">Test criteria</a>
+          <a href="#testergebnisse" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">Test results</a>
+          <a href="#faq" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">FAQ</a>
+          <a href="#conclusion" onclick="closeMobileTOC()" class="block text-sm text-gray-700 py-2 px-2 hover:bg-gray-50 rounded">Conclusion</a>
+        </nav>
+      </div>
+    </div>
+    <!-- Load Footer Component -->
+    <script src="js/footer.js"></script>
+    <!-- Render Footer -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const footerContainer = document.getElementById('footer');
+        if (!footerContainer) return;
+
+        // Insert the footer
+        footerContainer.innerHTML = Footer();
+      });
+    </script>
     <script>
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -1058,10 +1042,10 @@
 
         // Get both desktop and mobile TOC links
         const desktopTocLinks = document.querySelectorAll(
-          '.lg\\:block nav a[href^="#"]'
+                '.lg\\:block nav a[href^="#"]'
         );
         const mobileTocLinks = document.querySelectorAll(
-          '.lg\\:hidden nav a[href^="#"]'
+                '.lg\\:hidden nav a[href^="#"]'
         );
         let activeSection = null;
 
@@ -1103,12 +1087,12 @@
           if (href === activeSection) {
             // Active state - bold text + black left border
             link.className =
-              'block text-sm text-black font-medium py-2  border-l-2 border-black pl-2 rounded-r-lg transition-colors';
+                    'block text-sm text-black font-medium py-2  border-l-2 border-black pl-2 rounded-r-lg transition-colors';
             link.style.fontWeight = '600';
           } else {
             // Default state
             link.className =
-              'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 ';
+                    'block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2 ';
             link.style.fontWeight = '';
           }
         });
@@ -1119,41 +1103,50 @@
           if (href === activeSection) {
             // Active state - bold text + black left border
             link.className =
-              'block text-xs text-black font-medium py-2  border-l-3 border-black pl-2 rounded-r-lg transition-colors';
+                    'block text-xs text-black font-medium py-2  border-l-3 border-black pl-2 rounded-r-lg transition-colors';
             link.style.fontWeight = '600';
           } else {
             // Default state
             link.className =
-              'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2';
+                    'block text-xs text-gray-700 hover:text-gray-900 transition-colors py-2';
             link.style.fontWeight = '';
           }
         });
       }
 
+
       // Mobile TOC Toggle functionality
+      function toggleMobileTOC() {
+        const nav = document.getElementById('mobile-toc-nav');
+        const icon = document.getElementById('mobile-toc-icon');
+
+        if (nav.classList.contains('hidden')) {
+          nav.classList.remove('hidden');
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          nav.classList.add('hidden');
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      }
+
+      // Close mobile TOC when a link is clicked
+      function closeMobileTOC() {
+        const nav = document.getElementById('mobile-toc-nav');
+        const icon = document.getElementById('mobile-toc-icon');
+
+        nav.classList.add('hidden');
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
+
+      // Initialize mobile TOC state
       function initializeMobileTOC() {
-        const toggleButton = document.getElementById('mobile-toc-toggle');
-        const tocContent = document.getElementById('mobile-toc-content');
-        let isExpanded = false; // Start collapsed
-
-        if (toggleButton && tocContent) {
-          // Set initial collapsed state
-          tocContent.style.display = 'none';
-          toggleButton.querySelector('i').className = 'fas fa-chevron-down';
-
-          toggleButton.addEventListener('click', () => {
-            if (isExpanded) {
-              // Collapse
-              tocContent.style.display = 'none';
-              toggleButton.querySelector('i').className = 'fas fa-chevron-down';
-              isExpanded = false;
-            } else {
-              // Expand
-              tocContent.style.display = 'block';
-              toggleButton.querySelector('i').className = 'fas fa-chevron-up';
-              isExpanded = true;
-            }
-          });
+        const nav = document.getElementById('mobile-toc-nav');
+        if (nav) {
+          // Start with TOC collapsed on mobile
+          nav.classList.add('hidden');
         }
       }
 
@@ -1168,7 +1161,7 @@
       // Initialize on page load
       document.addEventListener('DOMContentLoaded', () => {
         updateActiveTableOfContents();
-        initializeMobileTOC(); // Initialize mobile TOC
+        initializeMobileTOC();
       });
 
       // Toggle sources container
@@ -1292,5 +1285,6 @@
         }
       });
     </script>
+
   </body>
 </html>
